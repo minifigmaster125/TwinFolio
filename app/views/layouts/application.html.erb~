@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
+
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <link href="https://fnt.webink.com/wfs/webink.css/?project=59518A3A-D1DC-41F8-9727-8F510FE3456F&fonts=80B6F619-B02C-4CF7-F8A5-8FF8BE8FC3EB:f=FaktSlabConPro-Normal,544EFDB8-EB3A-E086-9CF2-1386107B0082:f=FaktSlabConPro-BlackItalic,80F92E16-99F7-2EF6-3748-ADDB3EE10F1D:f=FaktSlabConPro-LightItalic,F28FFFB6-CF10-CF2C-E4ED-47FCA81AEEAB:f=FaktSlabConPro-Air,3DA1DBF9-4273-93F4-168E-BB2910B9FF5D:f=FaktSlabConPro-SemiBold,B7035850-1439-EFE6-B0AD-7D8E856B4BAA:f=FaktSlabConPro-Black,1B941038-AB14-7FC9-04B4-2A165481BFB7:f=FaktSlabConPro-Hair,B09FBEBF-E9C2-2351-8DD9-B8A877B47614:f=FaktSlabConPro-BlondItalic,23963605-32E8-D4D2-5CDB-D963333C3243:f=FaktSlabConPro-Bold,3723E6FB-F8CC-E935-FAED-521545C6BCE9:f=FaktSlabConPro-Medium,92662C6F-E9FA-AFCB-798D-6B95681CA026:f=FaktSlabConPro-MediumItalic,956DB4B7-7250-6C9A-E0B5-A2A501773A27:f=FaktSlabConPro-NormalItalic,A3F44496-8459-70A7-2423-DFA152785B75:f=FaktSlabConPro-ThinItalic,3D29D65E-AED5-25E6-49D3-A07569EEC356:f=FaktSlabConPro-Blond,77A13734-322B-995E-249E-BEADE5102CDC:f=FaktSlabConPro-AirItalic,A40A2B7A-03BA-79A6-F44F-86EC3EA0955A:f=FaktSlabConPro-SemiBoldItalic,36633501-3318-B7C2-7720-1BEEC2680F8B:f=FaktSlabConPro-Thin,855D7734-259E-EF17-3213-B81489010309:f=FaktSlabConPro-Light,4001CD92-CCBE-3A4C-0C89-2607AF3FD3B0:f=FaktSlabConPro-BoldItalic,636BD949-2578-4512-7C78-EF39B20726EE:f=FaktSlabConPro-HairItalic" rel="stylesheet" type="text/css"/>
+  	<%= stylesheet_link_tag    "application" %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <%= yield %>
+
+    
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>

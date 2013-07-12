@@ -1,0 +1,69 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+div{
+  #top-grey{
+    width:100%;
+    height: 8em;
+  }
+  
+  .arrows{
+    padding: 12%;
+  }
+  
+  .containers{
+    background: #F2F2F2;
+    //border: 1px solid black;
+    margin-top: 22em;
+  }
+  #left_grey_container{
+    box-shadow: -5px -5px 4px #E4E4E4 inset;
+    
+  }
+
+  #right_grey_container{
+    box-shadow: 5px -5px 4px #E4E4E4 inset;
+    
+  }
+
+  #left-panel{
+    background-color:white;
+    width: 100%;
+    //margin-left: -3%;
+    box-shadow: 7px -7px 4px #E4E4E4;
+  }
+
+  #right-panel{
+    background-color:white;
+    width:100%;
+    box-shadow: -7px -7px 4px #E4E4E4;
+    //width: 34em;
+    //margin-left: .9em;
+  }
+
+  #extra_info_top{
+    margin-top: 3.5em;
+  }
+
+  .extra_info{
+    font-family: FaktSlabConPro-Blond;
+    font-size: 3em;
+    text-align:center;
+    //border: 1px solid black;
+    color: #A9CCE5;
+  }
+}
+
+img{
+  display:block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10%;
+  //border: 1px solid black;
+}
+
+
+
