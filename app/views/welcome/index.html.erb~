@@ -28,14 +28,14 @@
     <div class="extra_info">
       this?
     </div>
-    <%= image_tag "Arrow-Down.png"%>
+    <%= link_to (image_tag "Arrow-Down.png"), about_path%>
   </div>
   <div class="large-5 columns">
     <div id = "right-panel">
       <div class="row">
         <div class="small-2 small-offset-10 columns"> 
           <div id="right_grey_container", class="containers">
-            <%= image_tag "Arrow-Left.png", class: "arrows"%>
+            <%= image_tag "Arrow-Right.png", class: "arrows"%>
           </div>
         </div>
       </div>
