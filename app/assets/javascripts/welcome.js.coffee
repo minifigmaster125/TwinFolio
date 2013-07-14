@@ -3,7 +3,9 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
-
+ 
+  $(window).unload ->
+  
   $(window).load ->
     $("#about").fadeIn 1500
 
@@ -15,6 +17,7 @@ $(document).ready ->
 # 
 #* Function to animate leaving a page
 #
+
 $.fn.leavePage = ->
   @click (event) ->
     
