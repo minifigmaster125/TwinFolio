@@ -11,4 +11,18 @@
  *= require_self
  *= require_tree .
  */
+
+body.homepage{
+   background: #F2F2F2;
+}
+
+@keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+    
  *= require foundation_and_overrides

@@ -2,23 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+#about{
+    display: none; 
+}
 
 div{
+
+  .arrows{
+    padding: 12%;
+  }
 
   .words{
     color: #A9CCE5;
   }
+
   // Title Page tags
+
 
   #top-grey{
     width:100%;
     height: 8em;
   }
   
-  .arrows{
-    padding: 12%;
-  }
   
   .containers{
     background: #F2F2F2;
@@ -62,6 +67,9 @@ div{
   }
 
   //About Page tags
+  
+    
+
   #top_words{
     font-family: FaktSlabConPro-Blond;
     font-size: 4em;
@@ -86,6 +94,12 @@ div{
     font-size: 2em;
     margin: 1em .5em;
     text-align: right;
+  }
+
+  .arrows_about{
+    //border: 1px solid black;
+    padding: 20%;
+    margin-top: 3em;
   }
 }
 

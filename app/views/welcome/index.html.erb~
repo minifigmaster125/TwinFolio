@@ -19,13 +19,13 @@
      </div>
   </div>
   <div class="large-2 columns">
-    <div id="extra_info_top", class="extra_info">
+    <div id="extra_info_top", class="extra_info words">
       What
     </div>
-    <div class="extra_info">
+    <div class="extra_info words">
       is
     </div>
-    <div class="extra_info">
+    <div class="extra_info words">
       this?
     </div>
     <%= link_to (image_tag "Arrow-Down.png"), about_path%>
