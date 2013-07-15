@@ -10,7 +10,18 @@ div{
 
   .arrows{
     padding: 12%;
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+    //border: 1px solid black;
   }
+
+  .transition{
+    display:block;
+    text-align:center;
+    //border: 1px solid black;
+   }
 
   .words{
     color: #A9CCE5;
@@ -74,43 +85,48 @@ div{
   #top_words{
     font-family: FaktSlabConPro-Blond;
     font-size: 4em;
-    margin: 1em .5em;
+    text-align:left;
+    margin: 1em 0em;
   }
   #middle_words{
     font-family: FaktSlabConPro-Blond;
     font-size: 3em;
-    margin: 0.5em .5em;
+    //margin: 0.5em 0em;
     text-align:right;
   }
 
   #bottom_left_words{
     font-family: FaktSlabConPro-Blond;
     font-size: 2em;
-    margin: 1em .5em;
+    //margin: 1em .5em;
     text-align: left;
   }
 
   #bottom_right_words{
     font-family: FaktSlabConPro-Blond;
     font-size: 2em;
-    margin: 1em .5em;
+    //margin: 1em .5em;
     text-align: right;
   }
 
   .arrows_about{
     //border: 1px solid black;
     padding: 20%;
-    margin-top: 3em;
+    //margin-bottom: 7em;
+  }
+
+  .about_bot_row{
+    margin-top:2em;
   }
 }
 
-img{
+/*img{
   display:block;
   margin-right: auto;
   margin-left: auto;
   margin-top: 10%;
-  //border: 1px solid black;
-}
+  border: 1px solid black;
+}*/
 
 
 
