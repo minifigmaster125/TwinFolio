@@ -78,6 +78,8 @@ div{
     //border: 1px solid black;
   }
 
+    
+
   //About Page tags
   
     
@@ -114,19 +116,23 @@ div{
     padding: 20%;
     //margin-bottom: 7em;
   }
+  
+  .arrows_about_up{
+    display:block;
+    text-align:center;
+    margin-top: 2em;
+  }
 
+  #up_info{
+    font-family: FaktSlabConPro-Blond;
+    font-size: 2em;
+    text-align: center;
+  }
   .about_bot_row{
     margin-top:2em;
   }
 }
 
-/*img{
-  display:block;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 10%;
-  border: 1px solid black;
-}*/
 
 
 

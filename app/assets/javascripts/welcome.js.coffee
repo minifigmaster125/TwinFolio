@@ -7,7 +7,11 @@ $(document).ready ->
   $(window).unload ->
   
   $(window).load ->
+    $("#home").fadeIn 1500
     $("#about").fadeIn 1500
+
+  $('body').css('display', 'none');
+  $('body').fadeIn(1500);
 
   $("#left-panel").height (index, height) ->
     window.innerHeight - $(this).offset().top
@@ -32,12 +36,10 @@ $.fn.leavePage = ->
       window.location = linkLocation
 
 
-
-
 # 
 #* Call the leavePage function upon link clicks with the "transition" class
 #
 $(".transition").leavePage()
-
+$(".arrows_about_up").leavePage()
 
 
