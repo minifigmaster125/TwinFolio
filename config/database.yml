@@ -48,13 +48,13 @@ test:
   encoding: unicode
   database: twinfolio_test
   pool: 5
-  username: twinfolio
-  password:
+  username: postgres
+  password: jsc321
 
 production:
   adapter: postgresql
   encoding: unicode
   database: twinfolio_production
   pool: 5
-  username: twinfolio
-  password:
+  username: postgres
+  password: jsc321
