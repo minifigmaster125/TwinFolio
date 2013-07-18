@@ -9,4 +9,19 @@ describe "Welcomes" do
 	expect(page).to have_title('Home')
     end
   end
+
+  describe "About page" do
+
+    it "has the title 'About'" do
+      visit '/about'
+      expect(page).to have_title('About')
+    end
+  end
+
+  describe "Joraaver page" do
+    it "has the title 'Joraaver'" do
+      visit '/Joraaver'
+      expect(page).to have_title('Joraaver')
+    end
+  end
 end
