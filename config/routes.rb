@@ -2,6 +2,7 @@ Twinfolio::Application.routes.draw do
   get "welcome/index"
   get "about", to: "welcome#show", as: :about
   get "Joraaver", to:"welcome#joraaver", as: :joraaver
+  get "Suchaaver", to:"welcome#suchaaver", as: :suchaaver
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

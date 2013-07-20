@@ -18,6 +18,9 @@ $(document).ready ->
 
   $("#right-panel").height (index, height) ->
     window.innerHeight - $(this).offset().top
+
+  $("#encase").height (index, height) ->
+    window.innerHeight - $(this).offset().top 
 # 
 #* Function to animate leaving a page
 #

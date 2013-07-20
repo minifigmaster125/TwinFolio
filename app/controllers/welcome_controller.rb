@@ -9,4 +9,7 @@ class WelcomeController < ApplicationController
 
   def joraaver
   end
+
+  def suchaaver
+  end
 end

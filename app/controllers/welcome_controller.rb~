@@ -4,5 +4,13 @@ class WelcomeController < ApplicationController
   end
 
   def show
+    render :show
+  end
+
+  def joraaver
+    @home_page = false;
+  end
+
+  def suchaaver
   end
 end

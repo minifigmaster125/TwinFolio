@@ -2,9 +2,76 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#about{
-    display: none; 
+
+#encase{
+  background-image: image-url("background_13.png"); 
+  min-height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;  
+  background-size: cover;
+  }
+
+.top-bar{
+  margin-left: 20%;
 }
+
+.project_img{
+  border: solid 2px black;
+  width: 80%;
+  float: left;
+  margin: 0 0 0 10%;
+}
+
+.circle{
+  height: 2em;
+  width:  2em;
+  opacity: 0.3;
+  background-color: #A9CCE5;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  margin-right: -1.1em;
+  margin-top: 17%;
+  padding: 0;
+  float: right;
+  
+}
+.orange_words{
+  font-family: FaktSlabConPro-Light;
+  
+  color: #FBB026;
+}
+
+.blue_words{
+  font-family: FaktSlabConPro-Light;
+  
+  color: #A9CCE5;
+}      
+
+#lower_name{
+  font-size: 4em;
+  letter-spacing: 4px;
+  margin: .1em 0 0 .2em;
+  text-align: center;
+}
+
+#middle_name{
+  font-family: FaktSlabConPro-NormalItalic; 
+  font-size: 2em;
+  letter-spacing: 4px;
+  margin: 0 0 0 1em;
+}
+
+#top_name{
+  //border: solid 1px black;
+  font-size: 6em;
+  letter-spacing: 11px;  
+  //margin-left: 2em;
+  margin:0 0 0 1em;
+  padding: 0;
+  }  
+  
 
 div{
 
@@ -103,7 +170,7 @@ div{
     //margin: 1em .5em;
     text-align: left;
   }
-
+                                                        
   #bottom_right_words{
     font-family: FaktSlabConPro-Blond;
     font-size: 2em;

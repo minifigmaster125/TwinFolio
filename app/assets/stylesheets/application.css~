@@ -9,20 +9,12 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
- */
-
-body.homepage{
+ *= require_tree . 
+ *= require foundation_and_overrides
+*/
+body{
+   display: none;
+   .homepage{
    background: #F2F2F2;
 }
 
-@keyframes fadein {
-  from {
-    opacity:0;
-  }
-  to {
-    opacity:1;
-  }
-}
-    
- *= require foundation_and_overrides

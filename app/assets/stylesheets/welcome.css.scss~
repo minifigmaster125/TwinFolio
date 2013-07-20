@@ -3,15 +3,92 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+#encase{
+  background-image: image-url("background_13.png"); 
+  min-height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;  
+  background-size: cover;
+  }
+
+.top-bar{
+  margin-left: 20%;
+}
+
+.project_img{
+  border: solid 2px black;
+  width: 80%;
+  float: left;
+  margin: 0 0 0 10%;
+}
+
+.circle{
+  height: 2em;
+  width:  2em;
+  opacity: 0.3;
+  background-color: #A9CCE5;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  margin-right: -1.1em;
+  margin-top: 17%;
+  padding: 0;
+  float: right;
+  
+}
+.orange_words{
+  font-family: FaktSlabConPro-Light;
+  
+  color: #FBB026;
+}
+
+.blue_words{
+  font-family: FaktSlabConPro-Light;
+  
+  color: #A9CCE5;
+}      
+
+#lower_name{
+  font-size: 4em;
+  letter-spacing: 4px;
+  margin: .1em 0 0 .2em;
+  text-align: center;
+}
+
+#middle_name{
+  font-family: FaktSlabConPro-NormalItalic; 
+  font-size: 2em;
+  letter-spacing: 4px;
+  margin: 0 0 0 1em;
+}
+
+#top_name{
+  //border: solid 1px black;
+  font-size: 6em;
+  letter-spacing: 11px;  
+  //margin-left: 2em;
+  margin:0 0 0 1em;
+  padding: 0;
+  }  
+  
 
 div{
-  #about{
-    display: none; 
-  }
 
   .arrows{
     padding: 12%;
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+    //border: 1px solid black;
   }
+
+  .transition{
+    display:block;
+    text-align:center;
+    //border: 1px solid black;
+   }
 
   .words{
     color: #A9CCE5;
@@ -56,8 +133,9 @@ div{
     //margin-left: .9em;
   }
 
-  #extra_info_top{
-    margin-top: 3.5em;
+  .extra_info_top{
+    margin-top: 8em;
+    // position: relative;
   }
 
   .extra_info{
@@ -67,6 +145,8 @@ div{
     //border: 1px solid black;
   }
 
+    
+
   //About Page tags
   
     
@@ -74,43 +154,52 @@ div{
   #top_words{
     font-family: FaktSlabConPro-Blond;
     font-size: 4em;
-    margin: 1em .5em;
+    text-align:left;
+    margin: 1em 0em;
   }
   #middle_words{
     font-family: FaktSlabConPro-Blond;
     font-size: 3em;
-    margin: 0.5em .5em;
-    text-align:center;
+    //margin: 0.5em 0em;
+    text-align:right;
   }
 
   #bottom_left_words{
     font-family: FaktSlabConPro-Blond;
     font-size: 2em;
-    margin: 1em .5em;
+    //margin: 1em .5em;
     text-align: left;
   }
-
+                                                        
   #bottom_right_words{
     font-family: FaktSlabConPro-Blond;
     font-size: 2em;
-    margin: 1em .5em;
+    //margin: 1em .5em;
     text-align: right;
   }
 
   .arrows_about{
     //border: 1px solid black;
     padding: 20%;
-    margin-top: 3em;
+    //margin-bottom: 7em;
+  }
+  
+  .arrows_about_up{
+    display:block;
+    text-align:center;
+    margin-top: 2em;
+  }
+
+  #up_info{
+    font-family: FaktSlabConPro-Blond;
+    font-size: 2em;
+    text-align: center;
+  }
+  .about_bot_row{
+    margin-top:2em;
   }
 }
 
-img{
-  display:block;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 10%;
-  //border: 1px solid black;
-}
 
 
 

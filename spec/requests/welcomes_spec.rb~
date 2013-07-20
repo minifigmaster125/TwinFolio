@@ -30,5 +30,4 @@ describe "Welcomes" do
       visit '/Suchaaver'
       expect(page).to have_title('Suchaaver')
     end
-  end
 end

@@ -1,0 +1,3 @@
+<% provide(:title, "Suchaaver") %>
+<h1>Suchaaver Chahal</h1>
+

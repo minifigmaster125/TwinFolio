@@ -12,6 +12,9 @@
  *= require_tree . 
  *= require foundation_and_overrides
 */
+body{
+   display: none;
+}
 body.homepage{
    background: #F2F2F2;
 }
