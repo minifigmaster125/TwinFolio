@@ -17,11 +17,8 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
-# Use Active Admin for Administration
-#gem 'activeadmin', 	   github: 'gregbell/active_admin', branch: 'rails4'
-#gem 'ransack',             github: 'ernie/ransack',         branch: 'rails-4'
-#gem 'inherited_resources', github: 'josevalim/inherited_resources'
-#gem 'formtastic',          github: 'justinfrench/formtastic'
+# Use Rails Admin for Administration
+gem 'rails_admin'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -60,3 +57,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
+gem "devise"

@@ -1,4 +1,7 @@
 Twinfolio::Application.routes.draw do
+  devise_for :users
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   get "welcome/index"
   get "about", to: "welcome#show", as: :about
   get "Joraaver", to:"welcome#joraaver", as: :joraaver
