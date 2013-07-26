@@ -40,6 +40,9 @@ group :test do
   gem 'capybara'
   gem 'guard-rspec'
   gem 'factory_girl_rails'
+  require 'rbconfig'
+  gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
+  
 end
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

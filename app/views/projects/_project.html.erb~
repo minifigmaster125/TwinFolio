@@ -1,0 +1,29 @@
+
+<div class = "module_bg">
+  <div class="row">
+    <div class = "small-12 columns", id = 'title'>
+      <%= project.name %>
+    </div>
+  </div>
+  <div class="row">
+    <div class = "small-3 small-offset-9 columns", id = 'date'>
+      <%= project.date %>
+    </div>
+  </div>
+  <div class="row">
+    <div class = "small-10 small-centered columns", id = 'pic'>
+    </div>
+  </div>
+  <div class="row">
+    <div class = "small-12 columns", id = 'info'>
+      <%= project.info %>
+    </div>
+  </div>
+  <div class="row">
+    <div class = "small-10 small-centered columns", id = 'more_button'>
+      <%= link_to "Read More", @project_path, class: 'more_text'  %>
+    </div>
+  </div>
+</div>
+
+

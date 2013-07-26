@@ -1,0 +1,14 @@
+<div class= "row">
+  <div class= "small-5 columns">
+    <h1>Listing projects</h1>
+  </div>
+  <div class= "small-7 columns">
+    <%= render 'shared/top_bar' %>
+  </div>
+<% provide(:title, "Projects") %>
+<div class = "row">
+<div class = "small-7 small-offset-2 columns" >
+  <%= render @projects %>
+</div>
+</div>
+<%= link_to 'New Project', new_project_path %>

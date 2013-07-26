@@ -35,6 +35,12 @@ describe "Welcomes" do
       visit '/Joraaver'
       expect(page).to have_title('Joraaver')
     end
+
+    it "links to 'Projects'" do
+      visit '/Joraaver'
+      click_link('middle_name') 
+      expect(page).to have_title('Projects')
+    end
   end
 
   describe "Suchaaver page" do
@@ -43,6 +49,17 @@ describe "Welcomes" do
       expect(page).to have_title('Suchaaver')
     end
   end
+
+  describe "Projects Index" do
+    it "has the title 'Projects'" do
+      visit '/projects'
+      expect(page).to have_title('Projects')
+    end
+  end
+
+    
+
+
 
   
 end
