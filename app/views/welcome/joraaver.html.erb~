@@ -16,7 +16,7 @@
     QUOTE
     <div class = 'row'>
       <div class = 'large-10 large-offset-2 columns'> 
-        <p class = 'orange_words', id="middle_name">Projects</p>
+        <p class = 'orange_words', id="middle_name"><%= link_to 'Projects', projects_path, class: 'orange_words', id: 'middle_name'%></p>
       </div> 
     </div>
   </div>
@@ -48,5 +48,6 @@
   <div class = 'large-8 columns'> 
     Stuff
   </div>  
+</div>
 </div>
 

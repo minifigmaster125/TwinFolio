@@ -42,10 +42,10 @@ describe "Welcomes" do
       expect(page).to have_title('Musings')
     end
 
-    it "has back arrow link to home" do
-      visit '/Suchaaver'
-      click_link('home_arrow')
-      expect(page).to have_title('Home')
+    it "links to 'Projects'" do
+      visit '/Joraaver'
+      click_link('middle_name') 
+      expect(page).to have_title('Projects')
     end
   end
 
@@ -68,6 +68,17 @@ describe "Welcomes" do
     end
       
   end
+
+  describe "Projects Index" do
+    it "has the title 'Projects'" do
+      visit '/projects'
+      expect(page).to have_title('Projects')
+    end
+  end
+
+    
+
+
 
   
 end
