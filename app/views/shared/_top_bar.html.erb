@@ -4,10 +4,14 @@
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
   <section class = "top-bar-section">
-    <ul class='right'>
+    <% if current_page? joraaver_path %>
+      <ul class='right'>
+    <% else %>
+      <ul class='left'>
+    <% end %>
       <li><a href="#">Home</a></li>
       <li class ='divider'></li>
-      <li><a href="#">Musings</a></li>
+      <li><%= link_to "Musings", '/musings', id: "musings_top_link" %></li>
       <li class ='divider'></li>  
       <li><a href="#">Projects</a></li>
     </ul>

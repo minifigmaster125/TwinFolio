@@ -35,6 +35,18 @@ describe "Welcomes" do
       visit '/Joraaver'
       expect(page).to have_title('Joraaver')
     end
+
+    it "links to Musings index" do
+      visit '/Joraaver'
+      click_link('musings_top_link')
+      expect(page).to have_title('Musings')
+    end
+
+    it "has back arrow link to home" do
+      visit '/Suchaaver'
+      click_link('home_arrow')
+      expect(page).to have_title('Home')
+    end
   end
 
   describe "Suchaaver page" do
@@ -42,6 +54,19 @@ describe "Welcomes" do
       visit '/Suchaaver'
       expect(page).to have_title('Suchaaver')
     end
+    
+    it "links to Musings index" do 
+      visit '/Suchaaver'
+      click_link('musings_top_link')
+      expect(page).to have_title('Musings')
+    end
+
+    it "has back arrow link to home" do
+      visit '/Suchaaver'
+      click_link('home_arrow')
+      expect(page).to have_title('Home')
+    end
+      
   end
 
   

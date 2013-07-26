@@ -1,0 +1,32 @@
+<%= provide :title, 'Musings'%>
+<h1>Listing musings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Post</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @musings.each do |musing| %>
+      <tr>
+        <td><%= musing.title %></td>
+        <td><%= musing.date %></td>
+        <td><%= musing.post %></td>
+        <td><%= link_to 'Show', musing %></td>
+        <td><%= link_to 'Edit', edit_musing_path(musing) %></td>
+        <td><%= link_to 'Destroy', musing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Musing', new_musing_path %>

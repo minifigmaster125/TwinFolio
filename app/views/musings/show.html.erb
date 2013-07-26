@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @musing.title %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @musing.date %>
+</p>
+
+<p>
+  <strong>Post:</strong>
+  <%= @musing.post %>
+</p>
+
+<%= link_to 'Edit', edit_musing_path(@musing) %> |
+<%= link_to 'Back', musings_path %>

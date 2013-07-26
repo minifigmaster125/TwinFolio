@@ -12,8 +12,14 @@
   background-size: cover;
   }
 
-.top-bar{
-  margin-left: 20%;
+  .top-bar{
+    margin-left: 20%;
+
+}
+
+#home_arrow{
+  display: block;
+  padding: 0 20% 20% 20%;
 }
 
 .project_img{
@@ -65,13 +71,14 @@
 
 #top_name{
   //border: solid 1px black;
-  font-size: 6em;
+  font-size: 500%; //6em;
   letter-spacing: 11px;  
   //margin-left: 2em;
   margin:0 0 0 1em;
   padding: 0;
-  }  
+}  
   
+
 
 div{
 
@@ -85,10 +92,19 @@ div{
   }
 
   .transition{
-    display:block;
     text-align:center;
+    display:block;
+    background:url('Arrow-Down.png') center top no-repeat;
+    width:100%;
+    height: 13em;
     //border: 1px solid black;
-   }
+    &:hover {
+      background:url('Arrow-Down-Hover.png') center top no-repeat;
+      margin-top: 1em;
+    }
+ 
+  }
+
 
   .words{
     color: #A9CCE5;
@@ -156,12 +172,6 @@ div{
     font-size: 4em;
     text-align:left;
     margin: 1em 0em;
-  }
-  #middle_words{
-    font-family: FaktSlabConPro-Blond;
-    font-size: 3em;
-    //margin: 0.5em 0em;
-    text-align:right;
   }
 
   #bottom_left_words{
