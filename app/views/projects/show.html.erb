@@ -15,5 +15,14 @@
   <%= @project.info %>
 </p>
 
+
+<p>
+  <strong>Info:</strong>
+  <% Image.find_all_by_project_id(@project.id).each do |i| %>
+  <%= image_tag i.photo.url %> 
+    <br/>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

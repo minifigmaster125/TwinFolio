@@ -47,6 +47,12 @@ describe "Welcomes" do
       click_link('middle_name') 
       expect(page).to have_title('Projects')
     end
+
+    it "has nav link to 'Projects'" do
+      visit '/Joraaver'
+      click_link('nav_projects') 
+      expect(page).to have_title('Projects')
+    end
   end
 
   describe "Suchaaver page" do
@@ -65,6 +71,18 @@ describe "Welcomes" do
       visit '/Suchaaver'
       click_link('home_arrow')
       expect(page).to have_title('Home')
+    end
+
+    it "has nav link to Projects index" do
+      visit '/Suchaaver'
+      click_link('Projects')
+      expect(page).to have_title('Projects')
+    end
+    
+    it "links to 'Projects'" do
+      visit '/Suchaaver'
+      click_link('Works') 
+      expect(page).to have_title('Projects')
     end
       
   end

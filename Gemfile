@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+gem 'paperclip', '~> 3.4.2'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
@@ -31,6 +32,9 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+
+gem 'shoulda-matchers'
 
 group :development, :test do
   gem 'rspec-rails'

@@ -15,10 +15,13 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   def new
     @project = Project.new
+    5.times { @project.images.build}
   end
 
   # GET /projects/1/edit
   def edit
+    @project = Post.find(params[:id])
+    5.times { @project.images.build}
   end
 
   # POST /projects
