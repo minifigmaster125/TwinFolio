@@ -1,13 +1,14 @@
-
+<div class="row">
+<div class = "small-7 small-offset-1 columns">
 <div class = "module_bg">
   <div class="row">
     <div class = "small-12 columns", id = 'title'>
-      <%= project.name %>
+      <%= @project.name %>
     </div>
   </div>
   <div class="row">
     <div class = "small-3 small-offset-9 columns", id = 'date'>
-      <%= project.date %>
+      <%= @project.date %>
     </div>
   </div>
   <div class="row">
@@ -16,14 +17,11 @@
   </div>
   <div class="row">
     <div class = "small-12 columns", id = 'info'>
-      <%= project.info %>
-    </div>
-  </div>
-  <div class="row">
-    <div class = "small-10 small-centered columns", id = 'more_button'>
-      <%= link_to "Read More", project_path(@project), id: 'more_text'  %>
+      <%= @project.info %>
     </div>
   </div>
 </div>
-
-
+</div>
+</div>
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

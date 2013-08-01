@@ -12,16 +12,17 @@
   </div>
   <div class="row">
     <div class = "small-10 small-centered columns", id = 'pic'>
+      <%= image_tag  Image.find_by_project_id(project.id).photo.url, :id => "first" %>
     </div>
   </div>
   <div class="row">
     <div class = "small-12 columns", id = 'info'>
-      <%= project.info %>
+        <%= project.info %>
     </div>
   </div>
   <div class="row">
     <div class = "small-10 small-centered columns", id = 'more_button'>
-      <%= link_to "Read More", @project_path, id: 'more_text'  %>
+      <%= link_to "Read More", project_path(project), id: 'more_text'  %>
     </div>
   </div>
 </div>

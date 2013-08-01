@@ -1,28 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @project.date %>
-</p>
-
-<p>
-  <strong>Info:</strong>
-  <%= @project.info %>
-</p>
-
-
-<p>
-  <strong>Info:</strong>
-  <% Image.find_all_by_project_id(@project.id).each do |i| %>
-  <%= image_tag i.photo.url %> 
-    <br/>
-  <% end %>
-</p>
-
+<div class="row">
+<div class = "small-8 small-offset-1 columns">
+<div class = "module_bg">
+  <div class="row">
+    <div class = "small-12 columns", id = 'title'>
+      <%= @project.name %>
+    </div>
+  </div>
+  <div class="row">
+    <div class = "small-3 small-offset-9 columns", id = 'date'>
+      <%= @project.date %>
+    </div>
+  </div>
+  <div class="row">
+    <div class = "small-10 small-centered columns", id = 'pic'>
+      <%= image_tag  Image.find_by_project_id(@project.id).photo.url, :id => "first" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class = "small-12 columns", id = 'info'>
+      <%= @project.info %>
+    </div>
+  </div>
+</div>
+</div>
+</div>
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

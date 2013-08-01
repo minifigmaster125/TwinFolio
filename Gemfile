@@ -33,8 +33,10 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-
+#Easier testing for db associations
 gem 'shoulda-matchers'
+#Pagination
+gem'will_paginate', '~> 3.0'
 
 group :development, :test do
   gem 'rspec-rails'
