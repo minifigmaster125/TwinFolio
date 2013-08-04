@@ -46,8 +46,6 @@ $('#search').hover ->
                   'margin-left': 0,
                   500
 
-# Scrolling stuff here, for projects#index.
-
 num_projects = $('.module_bg').size()
 current_height = 0
 if $('html, body').scrollTop() is 0

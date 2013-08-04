@@ -24,9 +24,7 @@
 
 .project_img{
   border: solid 2px black;
-  width: 80%;
-  float: left;
-  margin: 0 0 0 10%;
+  height: 200px;
 }
 
 .circle{
@@ -219,6 +217,26 @@ div{
   }
 }
 
+.orbit-container{
+  height: 300px;
+}
+
+#slider {
+  list-style-type: none;
+  height: 300px;
+  }
+
+#slider li{
+  display: inline;
+  position: absolute;
+  margin: 100px;
+  }
 
 
+#gallery-wrap{position: relative; overflow: hidden;}
 
+#gallery li{float: left; margin: 0 20px 15px 0;}
+#gallery li a img{border: 4px solid #40331b; height: 175px; width: 160px;}
+
+
+  

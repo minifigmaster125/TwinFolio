@@ -13,9 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.dotdotdot
+//= require foundation.min
+//= require custom.modernizr
 //= require foundation
 //= require turbolinks
+//=
 //= require_tree .
 
-$(document).foundation();
+
+$(document).foundation('orbit');
 

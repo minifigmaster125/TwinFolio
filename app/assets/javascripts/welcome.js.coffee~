@@ -18,6 +18,9 @@ $(document).ready ->
 
   $("#right-panel").height (index, height) ->
     window.innerHeight - $(this).offset().top
+
+  $("#encase").height (index, height) ->
+    window.innerHeight - $(this).offset().top 
 # 
 #* Function to animate leaving a page
 #
@@ -41,5 +44,24 @@ $.fn.leavePage = ->
 #
 $(".transition").leavePage()
 $(".arrows_about_up").leavePage()
+
+# Gallery
+if jQuery("#gallery").length
+    
+    # Declare variables
+    totalImages = jQuery("#gallery > li").length
+    imageWidth = jQuery("#gallery > li:first").outerWidth(true)
+    totalWidth = imageWidth * totalImages
+    visibleImages = Math.round(jQuery("#gallery-wrap").width() / imageWidth)
+    visibleWidth = visibleImages * imageWidth
+    stopPosition = (visibleWidth - totalWidth)
+    jQuery("#gallery").width totalWidth
+    jQuery("#gallery-prev").click ->
+      jQuery("#gallery").animate left: "+=" + imageWidth + "px"  if jQuery("#gallery").position().left < 0 and not jQuery("#gallery").is(":animated")
+      false
+
+    jQuery("#gallery-next").click ->
+      jQuery("#gallery").animate left: "-=" + imageWidth + "px"  if jQuery("#gallery").position().left > stopPosition and not jQuery("#gallery").is(":animated")
+      false
 
 

@@ -5,8 +5,27 @@
   <div class= "small-6 columns">
     <%= render 'shared/top_bar' %>
   </div>
-<% provide(:title, "Projects") %>
+  <% provide(:title, "Projects") %>
+  <div class ="row">
+  <div class = "small-4 small-offset-3 columns">
+    <%= will_paginate @projects, :class => 'apple_pagination', :previous_label => image_tag('paginate_left.png'),  :next_label => image_tag('paginate_right.png') %>
+  </div>
+</div>
 <div class = "row">
+  <div class = "small-1 columns scroll">
+    <aside id = "next_proj"> 
+      <div class= "row">
+        <div class = "go">
+          <div id = "prev_proj_triangle"></div>
+        </div>
+      </div>
+      <div class= "row">
+        <div class="go">
+          <div id = "next_proj_triangle"></div>
+        </div>
+      </div>
+    </aside>
+  </div>
   <div class = "small-8 small-offset-1 columns" >
     <%= render :partial => @projects %>
   </div>
@@ -14,19 +33,34 @@
   <div class = "small-3 columns">
     <aside id = "side_nav">
     <div class = "row">
-      <div class = "small-4 small-offset-4 columns side_button" >
+      <div class = "small-4 small-offset-4 columns" >
+        <div class= 'side_button', id = 'search'>
+        <div class = "search_icon_circle"></div>
+        <div id = "search_icon_bar"></div>
+        <%= form_tag("/search", method: "get") do %>
+          <%= text_field_tag :search_box, nil, :placeholder => "Search" %>
+          <%= submit_tag "Search", :id => "search_button" %>
+        <% end %> 
+        </div>
+          
       </div>
     </div>
     <div class = "row">
-      <div class = "small-4 small-offset-4 columns side_button" >
+      <div class = "small-4 small-offset-4 columns " >
+        <div class= 'side_button'></div>
+
       </div>
     </div>
     <div class = "row">
-      <div class = "small-4 small-offset-4 columns side_button" >
+      <div class = "small-4 small-offset-4 columns " >
+        <div class= 'side_button'></div>
+
       </div>
     </div>
     <div class = "row">
-      <div class = "small-4 small-offset-4 columns side_button" >
+      <div class = "small-4 small-offset-4 columns " >
+        <div class= 'side_button'></div>
+
       </div>
     </div>
     </aside>

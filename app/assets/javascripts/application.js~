@@ -12,13 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.dotdotdot
+//= require foundation.min
+//= require custom.modernizr
 //= require foundation
 //= require turbolinks
+//=
 //= require_tree .
-  $(window).load ->
-     $("#about").css "display", "none"
-     $("#about").fadeIn 2000
+
 
 $(document).foundation();
-
 

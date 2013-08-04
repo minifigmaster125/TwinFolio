@@ -5,7 +5,7 @@
 //@import "foundation/variables";
 //@import "foundation/components/global";
 //@import "foundation/components/buttons";
-$small-screen: 768px
+$small-screen: 768px;
 $medium-screen: 1280px;
 $large-screen: 1440px;
 
@@ -24,9 +24,12 @@ body{
 }
 
 .module_bg{
+    height: 445px;
+    overflow: hidden;
     background-color: #E8EFF1;
     border: 1px solid #A9CCE5;
-    margin: 10% 0;
+    margin-bottom: 10%;
+    margin-top: 5%;
     box-shadow: 0 0 2px 3px #FFFFFF;
   }
 #title{
@@ -45,17 +48,29 @@ body{
 }
 
 #info{
-  text-align: center;
+  text-align: left;
+  margin-left: 5em;
+  width: 45em;
   margin-bottom: 15px;
+  overflow: hidden;
+  //border: 2px solid #ccc;
+  //height: 160px;
+  //padding: 15px 20px 10px 20px;
+  //width: 275px;
 }
 
 #pic{
-  height: 9em;
+  
   background-color: #EEFCFF;
   box-shadow: 0 0 1px 2px #FFFFFF;
   border: 1px solid #A9CCE5;
   margin-bottom: 4%;
+  
+  #first {
+    display:block;
+    margin: auto;
   }
+}
 
 #more_button{
  //width: 100%;
@@ -80,6 +95,8 @@ body{
   color: white;
 }
 
+
+
 #side_nav{
   width: 25%;
   position: fixed;
@@ -91,6 +108,21 @@ body{
   margin-bottom: 10%;
   box-shadow: 0 0 2px 2px #FFFFFF;
 }
+#search{
+}
+
+#search_box{
+  margin: 20% 0;
+  position: absolute;
+  opacity: 0;
+}
+
+#search_button{
+  margin: 55% 0;
+  position: absolute;
+  opacity: 0;
+  background-color: #23A3CD; 
+}
 
 .side_button:hover{
    background-color: #23A3CD;
@@ -100,6 +132,7 @@ body{
    background-image:      -o-linear-gradient(top, #2F2727, #1a82f7);
    
  }
+
 
  .apple_pagination{
   text-align: center;
@@ -177,4 +210,75 @@ body{
     color: #FBB026;
     margin: 3%
   }
+}
+
+.search_icon_circle{
+  background-color: #EEFCFF;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 50%;
+  border: 1px solid #23A3CD;
+  height: 30px;
+  width: 30px;
+  margin: 15px 0 0 23px;
+  position: absolute;
+}
+
+#search_icon_bar{
+  width: 6px; 
+   height: 29px; 
+   background: #23A3CD;
+   margin: 34px 0 0 66px;
+   position: absolute;
+   /* Rotate */
+   -webkit-transform: rotate(-45deg);
+   -moz-transform: rotate(-45deg);
+   -ms-transform: rotate(-45deg);
+   -o-transform: rotate(-45deg);
+   transform: rotate(-45deg);
+   /* Rotate Origin */
+   -webkit-transform-origin: 0 100%;
+   -moz-transform-origin: 0 100%;
+   -ms-transform-origin: 0 100%;
+   -o-transform-origin: 0 100%;
+   transform-origin: 0 100%;
+}
+  
+  
+
+@media #{$small}{
+  .go{
+    margin-top: 20%;
+  }
+  #next_proj{
+    width: 8%;
+    margin-top: 15%;
+    position: fixed;
+  }
+  .proj_block{
+    height: 3em;
+    width: 2em;
+    background-color: #A9CCE5;
+    margin: auto;
+    //position: fixed;
+  }
+  #next_proj_triangle { 
+     width: 0;
+     height: 0;
+     border-top: 38px solid  #A9CCE5;
+     border-left: 30px solid transparent; 
+     border-right: 30px solid transparent; 
+     margin: auto;
+     //position: fixed;
+  }
+  #prev_proj_triangle { 
+     width: 0;
+     height: 0;
+     border-bottom: 38px solid  #A9CCE5;
+     border-left: 30px solid transparent; 
+     border-right: 30px solid transparent; 
+     margin: auto;
+     //position: fixed;
+  }
+  
+
 }
