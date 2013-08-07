@@ -4,14 +4,7 @@
 
 
 $(document).ready ->
-  ###
-  $('#info').dotdotdot()
-
-  $('#info').click ->
-    alert("Clicked")
-
-  alert "jTemplates is not loaded"  unless $.fn.dotdotdot()
-  ###
+  $("#wrapper").ellipsis()
 
 
 $('#search').hover ->

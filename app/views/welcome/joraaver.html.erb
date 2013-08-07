@@ -1,80 +1,24 @@
 <% provide(:title, "Joraaver") %>
-<div id="encase">
 <div class = 'row'>
-  <div class = 'large-7 columns'> 
-    <p class = 'orange_words', id="top_name">Joraaver Chahal</p>
+  <div class = "small-4 columns">
+    <%= render 'shared/nav_j' %>
   </div>
-  <div class = 'large-4 columns'> 
-    <%= render "shared/top_bar" %>
-  </div>
-  <div class = 'large-1 columns'>
-    <%= link_to (image_tag "Arrow-Right.png"), root_path, id: "home_arrow"%>
-  </div>
-</div>
-
-<div class = 'row'>
-  <div class = 'large-6 large-offset-1 columns'> 
-    QUOTE
-    <div class = 'row'>
-      <div class = 'large-10 large-offset-2 columns'> 
-        <%= link_to 'Projects', projects_path, class: 'orange_words', id: 'middle_name'%>
-      </div> 
+  <div class = "large-6 small-offset-5 columns" id = "major_info">
+    <div class = "row">
+      <%= image_tag "TestImage2.jpg" %>
     </div>
+    <hr id = "header_pic">
+    <div class = "row" id = "details">
+<p>During the Greek military junta (1967–1974) Maria Farantouri recorded protest songs in Europe with Mikis Theodorakis. In 1971, she recorded "Songs and Guitar Pieces by Theodorakis" with Australian guitarist John Williams which included seven poems by Federico García Lorca. She has recorded songs in Spanish ('Hasta Siempre Comandante Che Guevara'), Italian, and English ("Joe Hill" and Brecht's "Alabama Song' from Rise and Fall of the City of Mahagonny), as well as works by Greek composers Manos Hatzidakis, Eleni Karaindrou and Mikalis Bourboulis ('San Elektra' and 'Tora Xero') in which she realized a special fusion of vocal and instrumental beauty with musical accompaniment by Vangelis. She also sang the notable 'Mauthausen Cycle'.
+
+Her voice is deep contralto with about an octave and a half range.
+
+Maria Farantouri was an elected member of the Greek Parliament from 1989-1993 representing the Panhellenic Socialist Movement (PASOK).[2]
+
+She is married to the PASOK politician Tilemachos Chitiris.</p>
+    </div> 
   </div>
-   
-  <div class = 'large-3 columns'> 
-    PICTURE
-  </div>
+  <div class = "large-1 columns"></div> 
 </div>
 
-<div class = 'row'>
-  <% projects = Project.find(1,2,3) %>
-  <div class = 'small-1 columns'>
-    <a href="#" id="gallery-prev"><img src="images/prev.png" alt="" /></a>
-  </div>
-  <div class = 'small-10 columns galler'>
-    
-      <!--ul id = "slider">
-      <li> <% image_tag projects[0].images.first.photo.url, class: 'project_img'%>
-      <div class = 'circle'></div>
-      </li>
-        <li><% image_tag projects[1].images.first.photo.url,  class: 'project_img'%>
-        <!div class = 'circle'></div> 
-        </li>
-        <li><% image_tag projects[2].images.first.photo.url, class: 'project_img'%>
-        </li>
-        <li><% image_tag projects[2].images.first.photo.url, class: 'project_img'%>
-        </li>
-        <li><% image_tag projects[2].images.first.photo.url, class: 'project_img'%>
-        </li>
-    </ul-->  
-  </div>
-  <div class = 'small-1 columns'>
-
-    <a href="#" id="gallery-next"><img src="images/next.png" alt="" /></a>
-    
-  </div>
-  
-  <!--div class = 'large-4 columns'>
-     
-      
-      <div class = 'circle'></div>
-  </div>
-  <div class = 'large-4 columns'> 
-    <div class = 'circle'></div> 
-  </div>
-  <div class = 'large-4 columns'> 
-  </div-->
-</div>
-
-<div class = 'row'>
-  <div class = 'large-4 columns'> 
-    <p class = 'blue_words', id="lower_name">Latest</p>  
-    <p class = 'blue_words', id="lower_name">Musing</p>  
-  </div>
-  <div class = 'large-8 columns'> 
-    Stuff
-  </div>  
-</div>
-</div>
 

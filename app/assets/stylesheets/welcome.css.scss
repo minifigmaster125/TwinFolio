@@ -2,9 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$orange: #FF9900;
+$our-gray:#DEDCDC;
+$light-blue: #0AB3C9;
 
 #encase{
-  background-image: image-url("background_13.png"); 
+  //background-image: image-url("background_13.png"); 
   min-height: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -119,7 +122,7 @@ div{
   
   
   .containers{
-    background: #F2F2F2;
+    //background: #F2F2F2;
     //border: 1px solid black;
     margin-top: 22em;
   }
@@ -238,5 +241,22 @@ div{
 #gallery li{float: left; margin: 0 20px 15px 0;}
 #gallery li a img{border: 4px solid #40331b; height: 175px; width: 160px;}
 
+/* Joraaver & Suchaaver Pages */
 
+#header_pic{
+ height:2px;
+ background: $light-blue;
+}
+
+#major_info{
+  padding-left:1em;  
+
+  #details {
+    font-size: 140%;
+  }
   
+}
+
+
+
+

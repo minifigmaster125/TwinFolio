@@ -1,0 +1,158 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree . 
+ *= require foundation_and_overrides
+*/
+
+$orange: #FFA501;
+$our-gray:#D1D1D1;
+$light-blue: #23A3CD;
+
+body{
+   display: none;
+}
+body.homepage{
+   background: #F2F2F2;
+}
+
+/* Shared Nav (Joraaver) */
+.options_j{
+  background-color: $our-gray;
+  position:fixed;
+  left: 0;
+  text-align:center;
+  padding: 5px;
+  width: 31%;
+  height:100%;
+  border: solid 2px transparent;
+  
+  hr {
+     border: 0; 
+     height: 2px;
+     width: 60%;
+     align: center;
+     background: #C2C2C2;
+     margin:auto;
+  }
+  #firstname{
+    padding: 5px;
+    font-size:4em;
+    color: $orange;
+  }
+  #lastname{
+    padding: 5px 0px 20px 0px;
+    font-size:3em;
+    color: $orange;
+  }
+  
+  #options_list{
+    list-style-type: none;
+    
+    li{
+      padding: 5% 0 5% 0;
+    }
+    .options_link{
+      color: #E4E4E4;
+      opacity: 1.0;
+      font-size: 2em;
+ 
+      &:hover{
+        color: $orange;
+        opacity: 1.0;
+      }
+    }
+  
+    .options_current{
+      color:$light-blue;
+      font-size: 2em;
+      opacity: 1.0;
+    }
+
+    #with_triangle{
+      list-style-type:none;
+        
+      #triangle_right {
+        position:fixed;
+        left: 31%;
+        border-top: 22px solid transparent; 
+        border-left: 30px solid $our-gray;
+        border-bottom: 22px solid transparent; 
+      }
+    } 
+ } 
+}
+/* Shared Nav (Suchaaver) */
+.options_s{
+  background-color: $our-gray;
+  position:fixed;
+  right: 0;
+  text-align:center;
+  padding: 5px;
+  width: 31%;
+  height:100%;
+  border: solid 2px transparent;
+  
+  hr {
+     border: 0; 
+     height: 2px;
+     width: 60%;
+     align: center;
+     background: #C2C2C2;
+     margin:auto;
+  }
+  #firstname{
+    padding: 5px;
+    font-size:4em;
+    color: $orange;
+  }
+  #lastname{
+    padding: 5px 0px 20px 0px;
+    font-size:3em;
+    color: $orange;
+  }
+  
+  #options_list{
+    list-style-type: none;
+    
+    li{
+      padding: 5% 0 5% 0;
+    }
+    .options_link{
+      color: #E4E4E4;
+      opacity: 1.0;
+      font-size: 2em;
+ 
+      &:hover{
+        color: $orange;
+        opacity: 1.0;
+      }
+    }
+  
+    .options_current{
+      color:$light-blue;
+      font-size: 2em;
+      opacity: 1.0;
+    }
+
+    #with_triangle{
+      list-style-type:none;
+        
+      #triangle_left {
+        position:fixed;
+        right: 31%;
+        border-top: 22px solid transparent; 
+        border-right: 30px solid $our-gray;
+        border-bottom: 22px solid transparent; 
+      }
+    } 
+ } 
+}

@@ -1,0 +1,55 @@
+<div class = 'row'>
+  <div class = 'options_j'>
+    <div class = 'row' id = 'firstname'>
+      Joraaver
+    </div>
+    <div class = 'row' id = 'lastname'>
+       Chahal
+    </div>
+    <hr>
+    <ul id = 'options_list'>
+      <li><% if current_page?(projects_path) %>
+          <div class = 'row' id = 'with_triangle'>
+            <div class = 'small-12 columns'>
+                <%= link_to 'Projects', '#',class: 'options_current'%>
+            </div>
+            <p id="triangle_right"></p>
+          </div>
+          <% else %>
+            <%= link_to 'Projects', '#',class: 'options_link'%>         
+      <%end%></li>    
+      <li><% if current_page?(musings_path) %>
+          <div class = 'row' id = 'with_triangle'>
+            <div class = 'small-12 columns'>
+                <%= link_to 'Musings', '#',class: 'options_current'%>
+            </div>
+            <p id="triangle_right"></p>
+          </div>
+          <% else %>
+            <%= link_to 'Musings', '#',class: 'options_link'%>         
+      <%end%></li>    
+      <li><% if current_page?(joraaver_path) || current_page?(suchaaver_path) %>
+          <div class = 'row' id = 'with_triangle'>
+            <div class = 'small-12 columns'>
+                <%= link_to 'About Me', '#',class: 'options_current'%>
+            </div>
+            <p id="triangle_right"></p>
+          </div>
+          <% else %>
+            <%= link_to 'About Me', '#',class: 'options_link'%>
+      <%end%></li>
+      <li><%= link_to 'My Twin', '#',class: 'options_link'%></li>
+      <li><% if current_page?(joraaver_path) %>
+          <div class = 'row' id = 'with_triangle'>
+            <div class = 'small-12 columns'>
+                <%= link_to 'Goodies', '#',class: 'options_current'%>
+            </div>
+            <p id="triangle_right"></p>
+          </div>
+          <% else %>
+            <%= link_to 'Goodies', '#',class: 'options_link'%>
+      <%end%></li>
+    </ul>
+  </div>
+</div>
+

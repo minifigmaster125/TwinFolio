@@ -13,11 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.dotdotdot
+//= require jquery.autoellipsis
 //= require foundation.min
 //= require custom.modernizr
 //= require foundation
 //= require turbolinks
-//=
 //= require_tree .
 
 
