@@ -15,11 +15,9 @@
 body{
    display: none;
 }
-body.homepage{
+/*body.homepage{
    background: #F2F2F2;
-}
+}*/
 
-@import "foundation/variables";
-@import "foundation/components/global";
-@import "foundation/components/buttons";
+
 

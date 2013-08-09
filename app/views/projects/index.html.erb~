@@ -1,52 +1,34 @@
-<div class= "row">
-  <div class = 'small-5 small-offset-1 columns'> 
-    <p class = 'orange_words', id="top_name">Projects</p>
-  </div>
-  <div class= "small-6 columns">
-    <%= render 'shared/top_bar' %>
-  </div>
-  <% provide(:title, "Projects") %>
-  <div class ="row">
-  <div class = "small-4 small-offset-3 columns">
-    <%= will_paginate @projects, :class => 'apple_pagination', :previous_label => image_tag('paginate_left.png'),  :next_label => image_tag('paginate_right.png') %>
-  </div>
-  <div class = "small-3 columns">
-    <aside id = "side_nav">
-    <div class = "row">
-      <div class = "small-4 small-offset-4 columns" >
-        <div class= 'side_button', id = 'search'>
-        <div class = "search_icon_circle"></div>
-        <div id = "search_icon_bar"></div>
-        <%= form_tag("/search", method: "get") do %>
-          <%= text_field_tag :search_box, nil, :placeholder => "Search" %>
-          <%= submit_tag "Search", :id => "search_button" %>
-        <% end %> 
-        </div>
-          
-      </div>
-    </div>
-    <div class = "row">
-      <div class = "small-4 small-offset-4 columns " >
-        <div class= 'side_button'></div>
-
-      </div>
-    </div>
-    <div class = "row">
-      <div class = "small-4 small-offset-4 columns " >
-        <div class= 'side_button'></div>
-
-      </div>
-    </div>
-    <div class = "row">
-      <div class = "small-4 small-offset-4 columns " >
-        <div class= 'side_button'></div>
-
-      </div>
-    </div>
-    </aside>
-  </div>
-</div>
 <div class = "row">
+  <div class = "small-4 columns">
+    <%= render 'shared/nav_j' %>
+  </div>
+  <div class = "row">
+    <div class = "small-4 small-offset-7 columns">
+       <%= link_to "Latest Projects", project_path(Project.last), :class => 'blue_words', :id => "latest_proj_small"%>
+    </div>
+  </div>
+  <div class = "row">
+    <div class = "small-7 small-offset-5 columns">
+      <p class = 'blue_words', id="all_proj_large">All Projects</p>
+    </div>
+  </div>
+  <div class = "row">
+    <div class ="small-6 small-offset-5 columns">
+      <hr id = "header_pic">
+    </div>
+  </div>  
+  <div class = "row">
+  <div class = "large-6 small-offset-5 columns">
+    
+    <% provide(:title, "Projects") %>
+    
+    <%= render :partial => @projects%>
+    <div class ="row">
+      <div class = "small-4 small-offset-3 columns">
+        <%= will_paginate @projects, :class => 'apple_pagination', :previous_label => image_tag('paginate_left.png'),  :next_label => image_tag('paginate_right.png') %>
+      </div>
+    </div>
+  </div>
   <div class = "small-1 columns scroll">
     <aside id = "next_proj"> 
       <div class= "row">
@@ -60,16 +42,6 @@
         </div>
       </div>
     </aside>
-  </div>
-  <div class = "small-8 small-offset-1 columns" >
-    <%= render :partial => @projects %>
-  </div>
-  
-  
+  </div> 
+  </div>  
 </div>
-<div class ="row">
-  <div class = "small-4 small-offset-3 columns">
-    <%= will_paginate @projects, :class => 'apple_pagination', :previous_label => image_tag('paginate_left.png'),  :next_label => image_tag('paginate_right.png') %>
-  </div>
-</div>
-<%= link_to 'New Project', new_project_path %>

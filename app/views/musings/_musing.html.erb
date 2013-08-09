@@ -1,0 +1,40 @@
+
+<div class = "module_musing">
+<div class="row">
+    <div class = "row">
+        <div class = "small-12 columns", id = 'title'>
+          <%= musing.title %>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "small-12 columns", id = 'date'>
+        <%= musing.date %>
+        </div>
+      </div>
+    <div class = "row">
+      <div class = "small-12 columns", id = 'pic'>
+        <!--%= image_tag  Image.find_by_musing_id(musing.id).photo.url, :id => "first" %-->
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "small-12 columns", id = 'info_musing'>
+        <p><%= musing.post %></p>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "small-6 small-centered columns", id = 'info'>
+        <div id=  "more_musing_button">
+          <%= link_to "More", musing_path(musing), :id => 'more_musing'  %>
+        </div>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "small-12 columns">
+        <hr id="musing_divider"></hr>
+      </div>
+    </div>
+</div>
+</div>
+
+
+

@@ -1,30 +1,40 @@
 
-<div class = "module_bg">
+<!--div class = "module_bg"-->
   <div class="row">
-    <div class = "small-12 columns", id = 'title'>
-      <%= project.name %>
-    </div>
-  </div>
-  <div class="row">
-    <div class = "small-3 small-offset-9 columns", id = 'date'>
-      <%= project.date %>
-    </div>
-  </div>
-  <div class="row">
-    <div class = "small-10 small-centered columns", id = 'pic'>
+    <div class = "small-4 columns", id = 'pic'>
+      <% if project == Project.last%>
+        <%= image_tag  'Latest-Ribbon.png', :id => 'latest'  %>
+      <%end %>
       <%= image_tag  Image.find_by_project_id(project.id).photo.url, :id => "first" %>
     </div>
-  </div>
-  <div class="row">
-    <div class = "small-12 columns", id = 'info'>
-        <p><%= project.info %></p>
+    <div class = "small-5 columns">
+      <div class = "row">
+        <div class = "small-12 columns", id = 'title'>
+          <%= project.name %>
+        </div>
+      </div>
+      <div class = "row">
+        <div class = "small-12 columns", id = 'date'>
+        <%= project.date %>
+        </div>
+      </div>
+      <div class = "row">
+        <div class = "small-12 columns", id = 'info'>
+          <p><%= project.info %></p>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class = "small-10 small-centered columns", id = 'more_button'>
-      <%= link_to "Read More", project_path(project), id: 'more_text'  %>
+    <div class = "small-2 small-offset-1 columns">
+      <div id=  "more_button">
+        <%= link_to "M o r e", project_path(project), id: 'more_text'  %>
+      </div>
     </div>
-  </div>
+    <div class = "row">
+      <div class = "small-12 columns">
+        <hr id="project_divider"></hr>
+      </div>
+    </div>
 </div>
+<!--/div-->
 
 

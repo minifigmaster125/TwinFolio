@@ -35,7 +35,6 @@
  }
 
  #more_musing{
-  width: auto;
   color: black;
   text-align: center;
   line-height: 2em;

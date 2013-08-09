@@ -1,27 +1,32 @@
-<div class="row">
-<div class = "small-7 small-offset-1 columns">
-<div class = "module_bg">
-  <div class="row">
-    <div class = "small-12 columns", id = 'title'>
-      <%= @project.name %>
+<div class = 'row'>
+  <div class = "small-4 columns">
+    <%= render 'shared/nav_j' %>
+  </div>
+   <div class = "row">
+    <div class = "small-4 small-offset-7 columns">
+       <%= link_to "All Projects", project_path(Project.last), :class => 'blue_words', :id => "latest_proj_small"%>
     </div>
   </div>
-  <div class="row">
-    <div class = "small-3 small-offset-9 columns", id = 'date'>
-      <%= @project.date %>
+  <div class = "row">
+    <div class = "small-7 small-offset-5 columns">
+      <p class = 'blue_words', id="all_proj_large"><%= @project.name %></p>
     </div>
   </div>
-  <div class="row">
-    <div class = "small-10 small-centered columns", id = 'pic'>
+  <div class = "row">
+    <div class ="small-6 small-offset-5 columns">
+      <hr id = "header_pic">
     </div>
-  </div>
-  <div class="row">
-    <div class = "small-12 columns", id = 'info'>
+  </div>  
+  <div class = "large-6 small-offset-5 columns" id = "major_info">
+    <div class = "row">
+      <%= image_tag  Image.find_by_project_id(@project.id).photo.url, :id => "show_image" %>
+    </div>
+    <div class = "row" id = "details">
       <%= @project.info %>
-    </div>
+    </div> 
   </div>
+  <div class = "large-1 columns"></div> 
 </div>
-</div>
-</div>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
