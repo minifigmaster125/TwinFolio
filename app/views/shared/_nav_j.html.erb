@@ -18,7 +18,7 @@
           <% else %>
             <%= link_to 'Projects', projects_path ,class: 'options_link'%>         
       <%end%></li>    
-      <li><% if current_page?(musings_path) %>
+      <li><% if current_page?(musings_path) || current_page?(musing_path(@musing)) %>
           <div class = 'row' id = 'with_triangle'>
             <div class = 'small-12 columns'>
                 <%= link_to 'Musings', '#',class: 'options_current'%>
@@ -38,7 +38,11 @@
           <% else %>
             <%= link_to 'About Me', joraaver_path,class: 'options_link'%>
       <%end%></li>
-      <li><%= link_to 'My Twin', '#',class: 'options_link'%></li>
+      <% if joraaver? %>
+        <li><%= link_to 'My Twin', suchaaver_path ,class: 'options_link'%></li>
+      <%  else %>
+        <li><%= link_to 'My Twin', joraaver_path ,class: 'options_link'%></li>
+      <%end %>
       <li><% if current_page?(joraaver_path) %>
           <div class = 'row' id = 'with_triangle'>
             <div class = 'small-12 columns'>
@@ -48,7 +52,20 @@
           </div>
           <% else %>
             <%= link_to 'Goodies', '#',class: 'options_link'%>
-      <%end%></li>
+       <%end%></li>
+        <li><% if current_page?(joraaver_path) %>
+          <div class = 'row' id = 'with_triangle'>
+            <div class = 'small-12 columns'>
+                <%= link_to 'Contact', '#',class: 'options_current'%>
+            </div>
+            <p id="triangle_right"></p>
+          </div>
+          <% else %>
+            <%= link_to 'Contact', '#',class: 'options_link'%>
+       <%end%></li>
+       <li>
+            <%= link_to 'Home', root_path ,class: 'options_link'%>
+        </li>
     </ul>
   </div>
 </div>

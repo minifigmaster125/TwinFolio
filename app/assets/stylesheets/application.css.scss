@@ -26,7 +26,7 @@ body.homepage{
 
 /* Shared Nav (Joraaver) */
 .options_j{
-  background-color: $our-gray;
+  background-color: #3c3c3c;
   position:fixed;
   left: 0;
   text-align:center;
@@ -40,7 +40,7 @@ body.homepage{
      height: 2px;
      width: 60%;
      align: center;
-     background: #C2C2C2;
+     background: #4B4B4B;
      margin:auto;
   }
   #firstname{
@@ -53,17 +53,23 @@ body.homepage{
     font-size:3em;
     color: $orange;
   }
+  .home{
+    height: 75px;
+    width: 75px;
+    margin-top: -75%;
+    background-color: orange;
+  }
   
   #options_list{
     list-style-type: none;
-    
+    line-height: 1.3; 
     li{
       padding: 5% 0 5% 0;
     }
     .options_link{
       color: #E4E4E4;
       opacity: 1.0;
-      font-size: 2em;
+      font-size: 1.7em;
  
       &:hover{
         color: $orange;
@@ -73,7 +79,7 @@ body.homepage{
   
     .options_current{
       color:$light-blue;
-      font-size: 2em;
+      font-size: 1.7em;
       opacity: 1.0;
     }
 
@@ -84,7 +90,7 @@ body.homepage{
         position:fixed;
         left: 31%;
         border-top: 22px solid transparent; 
-        border-left: 30px solid $our-gray;
+        border-left: 30px solid #3c3c3c;
         border-bottom: 22px solid transparent; 
       }
     } 
@@ -92,7 +98,7 @@ body.homepage{
 }
 /* Shared Nav (Suchaaver) */
 .options_s{
-  background-color: $our-gray;
+  background-color: #3c3c3c;
   position:fixed;
   right: 0;
   text-align:center;
@@ -106,7 +112,7 @@ body.homepage{
      height: 2px;
      width: 60%;
      align: center;
-     background: #C2C2C2;
+     background: #4B4B4B;
      margin:auto;
   }
   #firstname{
@@ -122,14 +128,14 @@ body.homepage{
   
   #options_list{
     list-style-type: none;
-    
+    line-height: 1.3;
     li{
       padding: 5% 0 5% 0;
     }
     .options_link{
       color: #E4E4E4;
       opacity: 1.0;
-      font-size: 2em;
+      font-size: 1.7em;
  
       &:hover{
         color: $orange;
@@ -139,7 +145,7 @@ body.homepage{
   
     .options_current{
       color:$light-blue;
-      font-size: 2em;
+      font-size: 1.7em;
       opacity: 1.0;
     }
 
@@ -150,7 +156,7 @@ body.homepage{
         position:fixed;
         right: 31%;
         border-top: 22px solid transparent; 
-        border-right: 30px solid $our-gray;
+        border-right: 30px solid #3c3c3c;
         border-bottom: 22px solid transparent; 
       }
     } 

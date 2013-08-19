@@ -1,0 +1,33 @@
+<%= render 'shared/nav_s' %>  
+<div class = "row">
+  <div class = "row">
+    <div class = "small-4 small-offset-3 columns">
+      <%= link_to "Latest Project", suchaaver_project_path(Project.last), :class => 'blue_words', :id => "latest_proj_small"%>
+      
+    </div>
+  </div>
+  <div class = "row">
+    <div class = "small-6 small-offset-1 columns">
+      <p class = 'blue_words', id="all_proj_large">All Projects</p>
+    </div>
+  </div>
+  <div class = "row">
+    <div class ="small-6 small-offset-1 columns">
+      <hr id = "header_pic">
+    </div>
+  </div>  
+  <div class = "row">
+  <div class = "large-6 small-offset-1 columns">
+    
+    <% provide(:title, "Projects") %>
+    
+    <%= render :partial => @projects%>
+    <div class ="row">
+      <div class = "small-4 small-offset-3 columns">
+        <%= will_paginate @projects,:params => {:controller => suchaaver_projects_path}, :class => 'apple_pagination', :previous_label => image_tag('paginate_left.png'),  :next_label => image_tag('paginate_right.png') %>
+      </div>
+    </div>
+  </div>
+  </div> 
+  
+</div>

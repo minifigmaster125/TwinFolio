@@ -1,10 +1,15 @@
 class MusingsController < ApplicationController
+  include ApplicationHelper
   before_action :set_musing, only: [:show, :edit, :update, :destroy]
 
   # GET /musings
   # GET /musings.json
   def index
-    @musings = Musing.paginate(:page => params[:page], :per_page => 2, :order => "id DESC")
+    if joraaver? 
+      @musings = Musing.all_joraaver(params[:page])
+    else 
+      @musings = Musing.all_suchaaver(params[:page])
+    end
   end
 
   # GET /musings/1

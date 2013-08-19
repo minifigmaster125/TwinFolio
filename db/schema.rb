@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130731005319) do
+ActiveRecord::Schema.define(version: 20130819001011) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20130731005319) do
     t.text     "post"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "joraaver"
   end
 
   create_table "projects", force: true do |t|
@@ -40,6 +41,7 @@ ActiveRecord::Schema.define(version: 20130731005319) do
     t.text     "info"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "joraaver"
   end
 
   create_table "rails_admin_histories", force: true do |t|

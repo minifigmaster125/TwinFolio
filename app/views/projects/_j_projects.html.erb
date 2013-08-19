@@ -1,4 +1,3 @@
-<% if joraaver? %>
 <div class = "row">
   <div class = "small-4 columns">
     <%= render 'shared/nav_j' %>
@@ -30,23 +29,5 @@
       </div>
     </div>
   </div>
-  <div class = "small-1 columns scroll">
-    <aside id = "next_proj"> 
-      <div class= "row">
-        <div class = "go">
-          <div id = "prev_proj_triangle"></div>
-        </div>
-      </div>
-      <div class= "row">
-        <div class="go">
-          <div id = "next_proj_triangle"></div>
-        </div>
-      </div>
-    </aside>
-  </div> 
   </div>  
 </div>
-  
-<% else %>
-  <%= render 's_projects'%>
-<%end %>

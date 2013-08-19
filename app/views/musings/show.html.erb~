@@ -1,0 +1,35 @@
+<div class = "row">
+  <div class = "small-4 columns">
+    <%= render 'shared/nav_j' %>
+  </div>
+
+<div class="row">
+    <div class = "row">
+      <div class = "small-4 small-offset-7 columns">
+        <%= link_to "All Musings", musings_path, :class => 'blue_words', :id => "latest_proj_small"%>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "small-4 small-offset-5 columns">
+        <p class = 'blue_words', id="all_proj_large"><%= @musing.title %></p>
+      </div>
+      <div class = "small-2 columns", id = 'musing_date'>
+        <%= @musing.date %>
+      </div>
+    </div>
+    <div class = "row">
+      <div class ="small-6 small-offset-5 columns">
+        <hr id = "header_pic">
+      </div>
+    </div> 
+        
+    <div class = "small-6 small-offset-5 columns", id = 'pic'>
+      <!--%= image_tag  Image.find_by_musing_id(musing.id).photo.url, :id => "first" %-->
+    </div>
+    <div class = "row">
+      <div class = "small-6 small-offset-5 columns">
+        <p><%= @musing.post %></p>
+      </div>
+    </div>
+</div>
+</div>

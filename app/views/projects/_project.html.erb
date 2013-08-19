@@ -2,7 +2,7 @@
 <!--div class = "module_bg"-->
   <div class="row">
     <div class = "small-4 columns", id = 'pic'>
-      <% if project == Project.last%>
+      <% if project == @projects.first%>
         <%= image_tag  'Latest-Ribbon.png', :id => 'latest'  %>
       <%end %>
       <%= image_tag  Image.find_by_project_id(project.id).photo.url, :id => "first" %>
@@ -26,7 +26,15 @@
     </div>
     <div class = "small-2 small-offset-1 columns">
       <div id=  "more_button">
-        <%= link_to "M o r e", project_path(project), id: 'more_text'  %>
+        <% if joraaver? %>
+          <%= link_to project_path(project) do  %>
+            <%= image_tag 'More-text.png', :id => 'more_text' %>
+          <% end  %>
+        <% else %>
+          <%= link_to suchaaver_project_path(project) do  %>
+            <%= image_tag 'More-text.png', :id => 'more_text' %>
+          <% end  %>
+        <%end %>
       </div>
     </div>
     <div class = "row">
@@ -34,7 +42,7 @@
         <hr id="project_divider"></hr>
       </div>
     </div>
-</div>
+  </div>
 <!--/div-->
 
 

@@ -23,9 +23,19 @@
     </div>
     <div class = "row">
       <div class = "small-6 small-centered columns", id = 'info'>
-        <div id=  "more_musing_button">
-          <%= link_to "More", musing_path(musing), :id => 'more_musing'  %>
-        </div>
+        <% if joraaver? %>
+          <%= link_to musing_path(musing) do %>
+            <div id=  "more_musing_button">
+              <div id = "more_musing">More</div>
+            </div>              
+          <% end %>
+        <% else %>
+          <%= link_to suchaaver_musing_path(musing) do %>
+            <div id=  "more_musing_button">
+              <div id = "more_musing">More</div>
+            </div>              
+          <% end %>
+        <% end %>
       </div>
     </div>
     <div class = "row">

@@ -4,7 +4,11 @@ class MusingsController < ApplicationController
   # GET /musings
   # GET /musings.json
   def index
-    @musings = Musing.all
+    if joraaver? 
+      @musings = Musing.all_joraaver(params[:page])
+    else 
+      @musings = Musing.all_suchaaver(params[:page])
+    end
   end
 
   # GET /musings/1

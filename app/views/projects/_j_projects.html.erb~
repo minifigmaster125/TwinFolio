@@ -1,4 +1,3 @@
-<% if joraaver? %>
 <div class = "row">
   <div class = "small-4 columns">
     <%= render 'shared/nav_j' %>
@@ -46,7 +45,3 @@
   </div> 
   </div>  
 </div>
-  
-<% else %>
-  <%= render 's_projects'%>
-<%end %>

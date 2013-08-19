@@ -1,10 +1,16 @@
 class ProjectsController < ApplicationController
+  include ApplicationHelper
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.paginate(:page => params[:page], :per_page => 2, :order => "id DESC")
+    if joraaver? 
+      @projects = Project.all_joraaver(params[:page])
+    else 
+      @projects = Project.all_suchaaver(params[:page])
+    end
+    
   end
 
   # GET /projects/1

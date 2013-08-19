@@ -1,6 +1,18 @@
 Twinfolio::Application.routes.draw do
-  resources :musings
-  resources :projects
+  scope '/Joraaver' do
+    resources :musings
+  end
+  scope '/Suchaaver', as: 'suchaaver' do
+    resources :musings
+  end
+  scope '/Joraaver' do
+    resources :projects
+  end
+  scope '/Suchaaver', as: 'suchaaver' do
+    resources :projects
+  end
+
+
 
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
@@ -9,6 +21,8 @@ Twinfolio::Application.routes.draw do
   get "about", to: "welcome#show", as: :about
   get "Joraaver", to:"welcome#joraaver", as: :joraaver
   get "Suchaaver", to:"welcome#suchaaver", as: :suchaaver
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

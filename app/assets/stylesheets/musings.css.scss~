@@ -35,8 +35,16 @@
  }
 
  #more_musing{
+  width: auto;
   color: black;
   text-align: center;
   line-height: 2em;
 }
+
+#date{
+  float: left;
+  color: #23A3CD;
+  margin-top: 10px;
+  margin-bottom: 10px;
+ }
 
