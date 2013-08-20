@@ -1,0 +1,21 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$orange: #FFA501;
+$our-gray:#D1D1D1;
+$light-blue: #23A3CD;
+
+/* Goodies Page */
+#goodie_words{
+  text-align: right;
+  font-size: 150%;
+}
+
+#goodies_line{
+     border: 0; 
+     height: 2px;
+     background: $light-blue;
+     margin:auto;
+     opacity: 0.2;
+}

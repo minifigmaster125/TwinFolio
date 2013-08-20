@@ -21,7 +21,7 @@
       <li><% if current_page?(musings_path) || current_page?(musing_path(@musing)) %>
           <div class = 'row' id = 'with_triangle'>
             <div class = 'small-12 columns'>
-                <%= link_to 'Musings', '#',class: 'options_current'%>
+                <%= link_to 'Musings', musings_path,class: 'options_current'%>
             </div>
             <p id="triangle_right"></p>
           </div>
@@ -43,15 +43,15 @@
       <%  else %>
         <li><%= link_to 'My Twin', joraaver_path ,class: 'options_link'%></li>
       <%end %>
-      <li><% if current_page?(joraaver_path) %>
+      <li><% if current_page?('/Joraaver/goodies') %>
           <div class = 'row' id = 'with_triangle'>
             <div class = 'small-12 columns'>
-                <%= link_to 'Goodies', '#',class: 'options_current'%>
+                <%= link_to 'Goodies', '/Joraaver/goodies',class: 'options_current'%>
             </div>
             <p id="triangle_right"></p>
           </div>
           <% else %>
-            <%= link_to 'Goodies', '#',class: 'options_link'%>
+            <%= link_to 'Goodies', '/Joraaver/goodies', class: 'options_link'%>
        <%end%></li>
         <li><% if current_page?(joraaver_path) %>
           <div class = 'row' id = 'with_triangle'>

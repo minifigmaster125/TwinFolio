@@ -18,6 +18,8 @@ Twinfolio::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   get "welcome/index"
+  get "Joraaver/goodies", to: "static_pages#goodies", as: :goodies
+  get "Suchaaver/goodies", to: "static_pages#s_goodies", as: :s_goodies
   get "about", to: "welcome#show", as: :about
   get "Joraaver", to:"welcome#joraaver", as: :joraaver
   get "Suchaaver", to:"welcome#suchaaver", as: :suchaaver
