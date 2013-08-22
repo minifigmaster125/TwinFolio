@@ -53,15 +53,15 @@
           <% else %>
             <%= link_to 'Goodies', '/Joraaver/goodies', class: 'options_link'%>
        <%end%></li>
-        <li><% if current_page?(joraaver_path) %>
+        <li><% if current_page?(new_contact_path)||:title =~Contact%>
           <div class = 'row' id = 'with_triangle'>
             <div class = 'small-12 columns'>
-                <%= link_to 'Contact', '#',class: 'options_current'%>
+                <%= link_to 'Contact', new_contact_path,class: 'options_current'%>
             </div>
             <p id="triangle_right"></p>
           </div>
           <% else %>
-            <%= link_to 'Contact', '#',class: 'options_link'%>
+            <%= link_to 'Contact', new_contact_path,class: 'options_link'%>
        <%end%></li>
        <li>
             <%= link_to 'Home', root_path ,class: 'options_link'%>

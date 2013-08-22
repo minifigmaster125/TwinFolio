@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>You recieved a request to contact from</h1>
+    <p> <%= @contact.name %></p>
+    <h2>His message is this: </h2>
+    <p><%= @contact.body %> </p>
+    <h2>You can reply to his email address here:</h2>
+    <p><%= @contact.email %></p>
+  </body>
+</html>

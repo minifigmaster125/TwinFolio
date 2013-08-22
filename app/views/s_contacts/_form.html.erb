@@ -1,0 +1,18 @@
+  <%= form_for(SContact.new, :url => suchaaver_s_contacts_path) do |f| %>
+  <div class="field">
+    <%= f.text_field :name, :placeholder => "Name", :class => "contact_field" %>
+  </div>
+  <div class="field">
+    <%= f.email_field :email, :placeholder => "Email Address", :class => "contact_field"%>
+  </div>
+  <div class="field">
+    <%= f.text_area :body, :placeholder => "What you want to ask me", :class => "contact_field"%>
+  </div>
+  <div class = "row">
+    <div class = "small-3 small-offset-9 columns">
+      <div class="actions" id="suchaaver">
+        <%= f.submit "Send Mail" %>
+      </div>
+    </div>
+  </div>
+<% end %>

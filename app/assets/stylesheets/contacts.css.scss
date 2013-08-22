@@ -1,0 +1,36 @@
+// Place all the styles related to the Contacts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.alert {
+  display: block;
+  padding: 2%;
+}
+
+.alert-success{
+  background-color: #A9CCE5; 
+  border: 2px solid #348BCD;
+}
+
+.alert-failure{
+  background-color: #FCCF64;
+  border: 2px solid #FFA501;
+}
+
+.field{
+  font-size: 130%;
+  
+}
+
+.actions{
+  font-size: 130%;
+}
+
+.suchaaver_contact{
+  text-align:right;
+}
+
+
+#suchaaver{
+  text-align:right
+}

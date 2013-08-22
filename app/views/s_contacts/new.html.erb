@@ -1,0 +1,30 @@
+<% provide(:title, "Contact") %>
+<%= render 'shared/nav_s' %>
+
+  <div class = "row">
+    <div class = "small-4 small-offset-3 columns">
+      <p class = 'blue_words suchaaver_contact', id="all_proj_large">Contact Me</p>
+    </div>
+  </div>
+  <br />
+  <div class = "row">
+    <div class = "small-6 small-offset-1 columns">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+    </div>
+    <div class= "small-5 columns"></div>
+  </div>
+  <br />
+  <div class = "row">
+    <div class = "small-6 small-offset-1 columns">
+	<%= render 'form' %>
+    </div>
+    <div class = "small-5 columns"></div>
+  </div>
+  <br />
+  <div class = "row">
+    <div class = "small-4 small-offset-7 columns">
+    </div>
+    <div class = "small-1 columns"></div>
+  </div>

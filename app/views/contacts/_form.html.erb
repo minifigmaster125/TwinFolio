@@ -1,0 +1,14 @@
+  <%= form_for(Contact.new) do |f| %>
+  <div class="field">
+    <%= f.text_field :name, :placeholder => "Name" %>
+  </div>
+  <div class="field">
+    <%= f.email_field :email, :placeholder => "Email Address" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :body, :placeholder => "What you want to ask me" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Send Mail" %>
+  </div>
+<% end %>
