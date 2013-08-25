@@ -4,14 +4,7 @@
 
 
 $(document).ready ->
-  ###
-  $('#info').dotdotdot()
-
-  $('#info').click ->
-    alert("Clicked")
-
-  alert "jTemplates is not loaded"  unless $.fn.dotdotdot()
-  ###
+ # $("#wrapper").ellipsis()
 
 
 $('#search').hover ->
@@ -45,6 +38,8 @@ $('#search').hover ->
                   width: $('#search').parent().width()
                   'margin-left': 0,
                   500
+
+# Scrolling stuff here, for projects#index.
 
 num_projects = $('.module_bg').size()
 current_height = 0
@@ -82,4 +77,22 @@ $('#prev_proj_triangle').click ->
     $('html, body').animate
         scrollTop: ($(window).scrollTop() - ($('.module_bg').outerHeight(false) + $('.module_bg').offset().top) )
         current_height += $('.module_bg').height()
+
+$("#chosen").click ->
+  if $("#full_res").height() > $(window).height()
+    $("#full_res").height($(window).height()-20)
+  else
+
+$(".icons").click $("[id^=thumbnail]"), ->
+  targ = $(event.target).parent().data('photo')
+  $("#gallery_date .text").replaceWith("<div class = 'text'>" + $(event.target).parent().data('item').date + "</div>")
+  $("#gallery_inf .text").replaceWith("<div class = 'text'>" + $(event.target).parent().data('item').info + "</div>")
+  $("#chosen").fadeOut(500, ->
+    $("#chosen img").attr 'src', targ
+    $("#chosen").fadeIn(500, ->)
+  )
+  $("#full_res").attr 'src', targ
+  
+
+
 

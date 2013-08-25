@@ -1,14 +1,13 @@
 <%= render 'shared/nav_s' %>  
 <div class = "row">
   <div class = "row">
-    <div class = "small-4 small-offset-3 columns">
-      <%= link_to "Latest Project", suchaaver_project_path(Project.last), :class => 'blue_words', :id => "latest_proj_small"%>
-      
+    <div class = "small-3 small-offset-1 columns">
+      <p class = 'blue_words', id="all_proj_large">Gallery</p>
     </div>
-  </div>
-  <div class = "row">
-    <div class = "small-6 small-offset-1 columns">
-      <p class = 'blue_words', id="all_proj_large">All Projects</p>
+    <div class = "small-3  columns">
+      <p class = 'blue_words', id="gallery_info">Click on a thumbnail to learn more about the image, or click the image to view it full-size.</p>
+    </div>
+    <div class = "small-5 columns">
     </div>
   </div>
   <div class = "row">
@@ -20,14 +19,32 @@
   <div class = "large-6 small-offset-1 columns">
     
     <% provide(:title, "Projects") %>
-    
-    <%= render :partial => @projects%>
-    <div class ="row">
-      <div class = "small-4 small-offset-3 columns">
-        <%= will_paginate @projects,:params => {:path => suchaaver_projects_path}, :class => 'apple_pagination', :previous_label => image_tag('paginate_left.png'),  :next_label => image_tag('paginate_right.png') %>
+    <div class = "small-2 columns icons">
+      <% @projects.each do |proj| %>
+          <%= render 'gallery', :proj => proj %>
+      <% end %>
+      
+    </div>
+    <div class = "small-10 columns">
+      <%=link_to image_tag(Image.find_by_project_id(@projects.last.id).photo.url), '#', "data-reveal-id" => "full_pic",  :id => "chosen" %>
+      <div class = "row">
+        <hr id = "gallery_pic", class = "small-10 small-offset-1 columns">
+      </div>
+      <div class = "row">
+        <div class = "small-5 small-offset-7 columns", id = 'gallery_date'>
+          <div class = "text"><%= @projects.last.date %></div>
+        </div>
+      </div>
+      <div class = "row">
+        <div class = "small-11 small-offset-1 columns", id = 'gallery_inf'>
+          <div class = "text"><%= @projects.last.info %></div>
+        </div>
       </div>
     </div>
-  </div>
   </div> 
-  
 </div>
+<div id="full_pic" class="reveal-modal">
+  <%= image_tag Image.find_by_project_id(@projects.last.id).photo.url, :id => "full_res" %>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+

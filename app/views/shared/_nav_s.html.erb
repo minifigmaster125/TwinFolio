@@ -12,11 +12,11 @@
           <div class = 'row' id = 'with_triangle'>
             <p id="triangle_left"></p>
             <div class = 'small-12 columns'>
-                <%= link_to 'Projects', suchaaver_projects_path, class: 'options_current'%>
+                <%= link_to 'Gallery', suchaaver_projects_path, class: 'options_current'%>
             </div>
           </div>
           <% else %>
-            <%= link_to 'Projects', suchaaver_projects_path,class: 'options_link'%>         
+            <%= link_to 'Gallery', suchaaver_projects_path,class: 'options_link'%>         
       <%end%></li>    
       <li><% if current_page?(suchaaver_musings_path) || current_page?(suchaaver_musing_path(@musing)) %>
           <div class = 'row' id = 'with_triangle'>

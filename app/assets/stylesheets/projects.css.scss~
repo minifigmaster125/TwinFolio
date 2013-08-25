@@ -31,6 +31,24 @@ margin-right: auto;
   
 }
 
+#gallery_info{
+  font-size: 1.3em;
+  margin: 32px 0 0 0;
+}
+
+#chosen{
+  width: 95%;
+  height: auto;
+  float: right;
+}
+
+.thumbnails{
+  width: 100px;
+  height: 100px;
+  margin: 10px 0;
+  border: 1px solid #AAD4E9;
+}
+
 .module_bg{
     overflow: hidden;
     background-color: #E8EFF1;
@@ -44,6 +62,21 @@ margin-right: auto;
   margin-top: 10px;
   float: right;
 }
+
+#gallery_pic{
+}
+#full_pic{
+  top: 10px
+}
+
+.reveal-modal{
+  padding: 10px
+  }
+
+#full_res{
+  margin: 0 auto;
+  display: block;
+  }
 
 #all_proj_large{
   font-size: 5em;
@@ -97,12 +130,14 @@ margin-right: auto;
 
 #more_button{
  //width: 100%;
+ width: 60%;
  background-color: #FBB026;
    background-image: -webkit-linear-gradient(top, #FBB026 96%, #F78108 96%); 
    background-image:    -moz-linear-gradient(top, #FBB026 96%, #F78108 96%); 
    background-image:     -ms-linear-gradient(top, #FBB026 96%, #F78108 96%); 
    background-image:      -o-linear-gradient(top, #FBB026 96%, #F78108 96%); 
- margin-top: 25%;
+ margin-top: 19%;
+ border-radius: 10px;
  }
 #more_button:hover{
  background-color: #FBB026;
@@ -110,7 +145,7 @@ margin-right: auto;
    background-image:    -moz-linear-gradient(top, #FBB026 98%, #F78108 98%); 
    background-image:     -ms-linear-gradient(top, #FBB026 98%, #F78108 98%); 
    background-image:      -o-linear-gradient(top, #FBB026 98%, #F78108 98%); 
-   margin-top: 51%;
+   margin-top: 20%;
    
  }
 
@@ -118,7 +153,8 @@ margin-right: auto;
 
 
 #more_text{
-  text-align: center;  
+  margin: 0 22%;
+  height: 150px;  
   
 }
 
