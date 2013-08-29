@@ -1,47 +1,49 @@
 
 <div class = "module_musing">
+<div class = "musing_border">
 <div class="row">
     <div class = "row">
-        <div class = "small-12 columns", id = 'title'>
-          <%= musing.title %>
+        <div class = "small-4 columns">
+          <br />
+          <%= image_tag Image.find_by_musing_id(musing.id).photo.url, :id => "first" %>
+        </div>
+        <div class = "small-6 columns">
+        <br />
+          <div class = "row">
+            <div class = "small-12 columns", id = 'title'>
+              <%= musing.title %>
+            </div>
+          </div>
+          <div class = "row">
+            <div class = "small-12 columns", id = 'date'>
+              <%= musing.date %>
+            </div>
+          </div>
+          <div class = "row">
+            <div class = "small-12 columns", id = 'info_musing'>
+              <p><%= musing.post %></p>
+            </div>
+          </div>
         </div>
     </div>
     <div class = "row">
-        <div class = "small-12 columns", id = 'date'>
-        <%= musing.date %>
-        </div>
-      </div>
-    <div class = "row">
-      <div class = "small-12 columns", id = 'pic'>
-        <%= image_tag Image.find_by_musing_id(musing.id).photo.url, :id => "first" %>
-      </div>
-    </div>
-    <div class = "row">
-      <div class = "small-12 columns", id = 'info_musing'>
-        <p><%= musing.post %></p>
-      </div>
-    </div>
-    <div class = "row">
-      <div class = "small-6 small-centered columns", id = 'info'>
+      <div class = "small-10 small-centered columns", id = 'info'>
         <% if joraaver? %>
           <%= link_to musing_path(musing) do %>
             <div id= "more_musing_button">
-              <div id = "more_musing">More</div>
+              <div id = "more_musing">Read More</div>
             </div>
           <% end %>
         <% else %>
           <%= link_to suchaaver_musing_path(musing) do %>
             <div id= "more_musing_button">
-              <div id = "more_musing">More</div>
+              <div id = "more_musing">Read More</div>
             </div>
           <% end %>
         <% end %>
       </div>
     </div>
-    <div class = "row">
-      <div class = "small-12 columns">
-        <hr id="musing_divider"></hr>
-      </div>
-    </div>
 </div>
 </div>
+</div>
+<br />

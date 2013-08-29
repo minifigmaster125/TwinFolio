@@ -2,7 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$orange: #FFA501;
+$our-gray:#D1D1D1;
+$light-blue: #C9F0FF;
 
+body {
+  background-color: #F4F4F4;
+}
 #musing_divider{
   margin: 0 0 15px 0;
 }
@@ -14,9 +20,10 @@
 }
 
  #more_musing_button{
- //width: 100%;
+ float:right;
+ width: 40%;
  margin-top: 15px;
- height: 2em;
+ height: 3em;
  border-radius: 8px;
  background-color: #FBB026;
    background-image: -webkit-linear-gradient(top, #FBB026 86%, #F78108 86%); 
@@ -35,16 +42,38 @@
  }
 
  #more_musing{
-  width: auto;
-  color: black;
+  color: white;
   text-align: center;
   line-height: 2em;
+  font-size: 150%;
 }
 
 #musing_date{
-  float: left;
+  float: center;
   color: #23A3CD;
   margin-top: 10px;
   margin-bottom: 10px;
  }
 
+.module_musing{
+  border: solid 5px white;
+}
+
+.musing_border{
+  border: solid 1px #23A3C9;
+  background-color: #D1E5FF;
+ 
+  #first {
+    border: solid 2px white;
+    padding: 2%;
+    margin-left: 20%;
+    background-color:$light-blue;
+  }
+  
+  #date {
+    text-align: left;
+  }
+  #title {
+    text-align: left;
+  }
+}

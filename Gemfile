@@ -60,7 +60,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
- gem 'bcrypt-ruby', git: 'git@github.com:hananamar/bcrypt-ruby.git', :require => 'bcrypt'
+ gem 'bcrypt-ruby', :git => 'git://github.com/hananamar/bcrypt-ruby.git', :require => 'bcrypt'
 
 # Use unicorn as the app server
 # gem 'unicorn'
