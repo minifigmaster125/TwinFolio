@@ -21,5 +21,5 @@
 //= require_tree .
 
 
-$(document).foundation('orbit');
+$(document).foundation();
 

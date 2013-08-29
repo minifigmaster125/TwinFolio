@@ -1,0 +1,7 @@
+<div class = "row">
+  <div class= "small-12 columns">
+    <%= content_tag "div", data: {item: Image.find_by_project_id(proj.id).photo.url  } do %>
+      <%= image_tag  Image.find_by_project_id(proj.id).photo.url, id: "thumbnail#{proj.id}", :class => "thumbnails" %>
+    <%end %>
+  </div>
+</div>

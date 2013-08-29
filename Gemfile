@@ -39,6 +39,9 @@ gem 'shoulda-matchers'
 #Pagination
 gem'will_paginate', '~> 3.0'
 
+#for rails variables in js
+gem 'gon'
+
 group :development, :test do
   gem 'rspec-rails'
 end 
@@ -57,7 +60,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+ gem 'bcrypt-ruby', git: 'git@github.com:hananamar/bcrypt-ruby.git', :require => 'bcrypt'
 
 # Use unicorn as the app server
 # gem 'unicorn'

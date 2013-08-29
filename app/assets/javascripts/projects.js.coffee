@@ -4,7 +4,7 @@
 
 
 $(document).ready ->
-  $("#wrapper").ellipsis()
+ # $("#wrapper").ellipsis()
 
 
 $('#search').hover ->
@@ -77,4 +77,20 @@ $('#prev_proj_triangle').click ->
     $('html, body').animate
         scrollTop: ($(window).scrollTop() - ($('.module_bg').outerHeight(false) + $('.module_bg').offset().top) )
         current_height += $('.module_bg').height()
+
+$("#chosen").click ->
+  $("#full_res").height($(window).height()-20)
+
+$(".icons").click $("[id^=thumbnail]"), ->
+  targ = $(event.target).parent().data('photo')
+  $("#gallery_date .text").replaceWith("<div class = 'text'>" + $(event.target).parent().data('item').date + "</div>")
+  $("#gallery_inf .text").replaceWith("<div class = 'text'>" + $(event.target).parent().data('item').info + "</div>")
+  $("#chosen").fadeOut(500, ->
+    $("#chosen img").attr 'src', targ
+    $("#chosen").fadeIn(500, ->)
+  )
+  $("#full_res").attr 'src', targ
+  
+
+
 

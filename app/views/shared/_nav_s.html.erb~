@@ -43,16 +43,29 @@
       <%  else %>
         <li><%= link_to 'My Twin', joraaver_path ,class: 'options_link'%></li>
       <%end %>
-      <li><% if current_page?(joraaver_path) %>
+      <li><% if current_page?('/Suchaaver/goodies') %>
           <div class = 'row' id = 'with_triangle'>
             <p id="triangle_left"></p>
             <div class = 'small-12 columns'>
-                <%= link_to 'Goodies', '#',class: 'options_current'%>
+                <%= link_to 'Goodies', '/Suchaaver/goodies',class: 'options_current'%>
             </div>
           </div>
           <% else %>
-            <%= link_to 'Goodies', '#',class: 'options_link'%>
-      <%end%></li>
+            <%= link_to 'Goodies', '/Suchaaver/goodies',class: 'options_link'%>
+          <%end%></li>
+          <li><% if current_page?(new_suchaaver_s_contact_path) %>
+          <div class = 'row' id = 'with_triangle'>
+            <div class = 'small-12 columns'>
+                <%= link_to 'Contact', new_suchaaver_s_contact_path,class: 'options_current'%>
+            </div>
+            <p id="triangle_right"></p>
+          </div>
+          <% else %>
+            <%= link_to 'Contact', new_suchaaver_s_contact_path,class: 'options_link'%>
+       <%end%></li>
+       <li>
+            <%= link_to 'Home', root_path ,class: 'options_link'%>
+        </li>
     </ul>
   </div>
 </div>
