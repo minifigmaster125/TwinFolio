@@ -19,8 +19,12 @@
         <%= @musing.date %>
       </div>
     </div>
+    <br />
     <div class = "row">
       <div class ="small-6 small-offset-5 columns">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
         <hr id = "header_pic">
       </div>
     </div> 
@@ -31,6 +35,25 @@
     <div class = "row">
       <div class = "small-6 small-offset-5 columns">
         <p><%= @musing.post %></p>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "small-6 small-offset-5 columns">
+        <h3>Comments </h3>
+        <div id = "display_comment_form">
+	  New Comment
+        </div >
+        <br />
+        <div id = "form">
+          <%= render 'comments/form' %>
+        </div>
+        <% @musing.comments.each do |c| %>
+        <ul class = "comment_info">
+          <li id="name"><%= c.name %></li>
+          <li id="posted">posted a comment</li>
+        </ul>
+        <p id="body"><%= c.comment %> </p>
+	<% end %>
       </div>
     </div>
 </div>
@@ -55,8 +78,12 @@
         <%= @musing.date %>
       </div>
     </div>
+    <br />
     <div class = "row">
       <div class ="small-6 small-offset-1 columns">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
         <hr id = "header_pic">
       </div>
     </div> 
@@ -69,6 +96,27 @@
         <p><%= @musing.post %></p>
       </div>
     </div>
+    
+    <div class = "row">
+      <div class = "small-6 small-offset-1 columns">
+        <h3>Comments </h3>
+        <div id = "display_comment_form">
+	  New Comment
+        </div >
+        <br />
+        <div id = "form">
+          <%= render 'comments/form' %>
+        </div>
+        <% @musing.comments.each do |c| %>
+        <ul class = "comment_info">
+          <li id="name"><%= c.name %></li>
+          <li id="posted">posted a comment</li>
+        </ul>
+        <p id="body"><%= c.comment %> </p>
+	<% end %>
+      </div>
+    </div>
+
 </div>
 </div>
 <% end %>

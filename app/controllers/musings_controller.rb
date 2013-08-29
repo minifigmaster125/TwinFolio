@@ -15,6 +15,7 @@ class MusingsController < ApplicationController
   # GET /musings/1
   # GET /musings/1.json
   def show
+    set_musing
   end
 
   # GET /musings/new

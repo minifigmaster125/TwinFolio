@@ -1,0 +1,63 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+$comment_blue: #D2E2EF;
+$orange: #FFA501;
+
+#comment{
+  width: 30%;
+}
+
+.comment_info {
+
+  #name{
+  }
+
+  li{
+    display:inline;
+  }
+}
+
+#body{
+  background-color: $comment_blue;
+}
+
+#display_comment_form{
+ //width: 100%;
+ margin-top: 15px;
+ height: 2em;
+ border-radius: 8px;
+ background-color: #FBB026;
+   background-image: -webkit-linear-gradient(top, #FBB026 86%, #F78108 86%); 
+   background-image:    -moz-linear-gradient(top, #FBB026 86%, #F78108 86%); 
+   background-image:     -ms-linear-gradient(top, #FBB026 86%, #F78108 86%);
+   background-image:      -o-linear-gradient(top, #FBB026 86%, #F78108 86%);
+ }
+#display_comment_form:hover{
+ background-color: #FBB026;
+ margin-top: 16px;
+   background-image: -webkit-linear-gradient(top, #FBB026 93%, #F78108 93%); 
+   background-image:    -moz-linear-gradient(top, #FBB026 93%, #F78108 93%);  
+   background-image:     -ms-linear-gradient(top, #FBB026 93%, #F78108 93%); 
+   background-image:      -o-linear-gradient(top, #FBB026 93%, #F78108 93%);  
+   
+ }
+
+#display_comment_form{
+  width: auto;
+  color: black;
+  text-align: center;
+  line-height: 2em;
+}
+
+#comment_name {
+  background-color: #C9F0FF;
+}
+#comment_email {
+  background-color: #C9F0FF;
+}
+#comment_comment {
+  background-color: #C9F0FF;
+}
