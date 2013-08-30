@@ -1,0 +1,32 @@
+<% if joraaver? %>
+<%= form_for(Comment.new, :url => musing_comments_path(@musing)) do |f| %>
+  <div class="field">
+    <%= f.text_field :name, :placeholder => "Name" %>
+  </div>
+  <div class="field">
+    <%= f.email_field :email, :placeholder => "Email Address" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :comment, :placeholder => "Comment" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Comment" %>
+  </div>
+<% end %>
+<% else %>
+<%= form_for(Comment.new, :url => suchaaver_musing_comments_path(@musing)) do |f| %>
+  <div class="field">
+    <%= f.text_field :name, :placeholder => "Name" %>
+  </div>
+  <div class="field">
+    <%= f.email_field :email, :placeholder => "Email Address" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :comment, :placeholder => "Comment" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Comment" %>
+  </div>
+<% end %>
+<% end %>
+

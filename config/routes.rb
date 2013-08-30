@@ -1,11 +1,16 @@
 Twinfolio::Application.routes.draw do
 
-
   scope '/Joraaver' do
-    resources :musings, :contacts
+    resource :contacts
+    resources :musings do
+      resource :comments
+    end
   end
+
   scope '/Suchaaver', as: 'suchaaver' do
-    resources :musings
+    resources :musings do
+      resource :comments
+    end
   end
   scope '/Joraaver' do
     resources :projects

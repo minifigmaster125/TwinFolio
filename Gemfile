@@ -7,6 +7,7 @@ gem 'paperclip', '~> 3.4.2'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -59,7 +60,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
- gem 'bcrypt-ruby', git: 'git@github.com:hananamar/bcrypt-ruby.git', :require => 'bcrypt'
+ gem 'bcrypt-ruby', :git => 'git://github.com/hananamar/bcrypt-ruby.git', :require => 'bcrypt'
 
 # Use unicorn as the app server
 # gem 'unicorn'

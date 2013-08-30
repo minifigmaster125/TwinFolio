@@ -1,6 +1,7 @@
 class Musing < ActiveRecord::Base
   validates_presence_of :title,:post,:date
-  has_many :images, :inverse_of => :musing
+  has_many  :images, :inverse_of => :musing
+  has_many :comments
   accepts_nested_attributes_for :images, :allow_destroy => true
 
   def self.all_joraaver(page)

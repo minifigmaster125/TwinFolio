@@ -1,29 +1,33 @@
-// Place all the styles related to the musings controller here.
+// Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+$comment_blue: #D2E2EF;
 $orange: #FFA501;
-$our-gray:#D1D1D1;
-$light-blue: #C9F0FF;
 
-body {
-  background-color: #F4F4F4;
-}
-#musing_divider{
-  margin: 0 0 15px 0;
+#comment{
+  width: 30%;
 }
 
-#info_musing{
-  overflow: hidden;
-  height: 170px;
-  
+.comment_info {
+
+  #name{
+  }
+
+  li{
+    display:inline;
+  }
 }
 
- #more_musing_button{
- float:right;
- width: 40%;
+#body{
+  background-color: $comment_blue;
+}
+
+#display_comment_form{
+ //width: 100%;
  margin-top: 15px;
- height: 3em;
+ height: 2em;
  border-radius: 8px;
  background-color: #FBB026;
    background-image: -webkit-linear-gradient(top, #FBB026 86%, #F78108 86%); 
@@ -31,7 +35,7 @@ body {
    background-image:     -ms-linear-gradient(top, #FBB026 86%, #F78108 86%);
    background-image:      -o-linear-gradient(top, #FBB026 86%, #F78108 86%);
  }
-#more_musing_button:hover{
+#display_comment_form:hover{
  background-color: #FBB026;
  margin-top: 16px;
    background-image: -webkit-linear-gradient(top, #FBB026 93%, #F78108 93%); 
@@ -41,39 +45,19 @@ body {
    
  }
 
- #more_musing{
-  color: white;
+#display_comment_form{
+  width: auto;
+  color: black;
   text-align: center;
   line-height: 2em;
-  font-size: 150%;
 }
 
-#musing_date{
-  float: center;
-  color: #23A3CD;
-  margin-top: 10px;
-  margin-bottom: 10px;
- }
-
-.module_musing{
-  border: solid 5px white;
+#comment_name {
+  background-color: #C9F0FF;
 }
-
-.musing_border{
-  border: solid 1px #23A3C9;
-  background-color: #D1E5FF;
- 
-  #first {
-    border: solid 2px white;
-    padding: 2%;
-    margin-left: 20%;
-    background-color:$light-blue;
-  }
-  
-  #date {
-    text-align: left;
-  }
-  #title {
-    text-align: left;
-  }
+#comment_email {
+  background-color: #C9F0FF;
+}
+#comment_comment {
+  background-color: #C9F0FF;
 }
