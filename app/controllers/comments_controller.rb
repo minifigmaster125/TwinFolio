@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.all
+    @comments = Comment.where(:is_moderated => 'true')
   end
 
   # GET /comments/1
@@ -28,9 +28,11 @@ class CommentsController < ApplicationController
     @comment = @musing.comments.new(comment_params)
       if @comment.save
        if(@musing.joraaver == false)
-         redirect_to suchaaver_musing_path(@musing),:flash => { success: "Comment succesfully added!" }
+         redirect_to suchaaver_musing_path(@musing),:flash => { success: "Your comment will undergo moderation before being added. Thanks!" }
+         ContactMailer.s_comment(@comment).deliver
        else
-         redirect_to musing_path(@musing),:flash => { success: "Comment succesfully added!" }
+         redirect_to musing_path(@musing),:flash => { success: "Your comment will undergo moderation before being added. Thanks!" }
+ 	 ContactMailer.comment(@comment).deliver
        end
       else
        if(@musing.joraaver == false)

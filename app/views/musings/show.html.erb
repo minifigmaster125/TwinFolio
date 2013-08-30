@@ -48,11 +48,14 @@
           <%= render 'comments/form' %>
         </div>
         <% @musing.comments.each do |c| %>
+        <% if c.is_moderated %>
         <ul class = "comment_info">
+          <li id="photo"><%= image_tag avatar_url(c) %></li>
           <li id="name"><%= c.name %></li>
           <li id="posted">posted a comment</li>
         </ul>
         <p id="body"><%= c.comment %> </p>
+        <%end %>
 	<% end %>
       </div>
     </div>
@@ -108,11 +111,14 @@
           <%= render 'comments/form' %>
         </div>
         <% @musing.comments.each do |c| %>
+        <% if c.is_moderated %>
         <ul class = "comment_info">
+          <li id="photo"><%= avatar_url(c) %></li>
           <li id="name"><%= c.name %></li>
           <li id="posted">posted a comment</li>
         </ul>
         <p id="body"><%= c.comment %> </p>
+        <% end %>
 	<% end %>
       </div>
     </div>
