@@ -2,9 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$orange: #FF9900;
+$our-gray:#DEDCDC;
+$light-blue: #0AB3C9;
 
-/*#encase{
-  background-image: image-url("background_13.png"); 
+#about_home{
+    display: none;
+    padding-top: 30px;
+    background-color: #F78108;
+  }
+
+#encase{
+  //background-image: image-url("background_13.png"); 
   min-height: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -15,7 +24,7 @@
   .top-bar{
     margin-left: 20%;
 
-}*/
+}
 
 #home_arrow{
   display: block;
@@ -90,6 +99,19 @@ div{
     //border: 1px solid black;
   }
 
+  #scroller{
+    text-align:center;
+    display:block;
+    background:url('Arrow-Down.png') center top no-repeat;
+    width:100%;
+    height: 13em;
+    //border: 1px solid black;
+    &:hover {
+      background:url('Arrow-Down-Hover.png') center top no-repeat;
+      margin-top: 1em;
+    }
+  }
+
   .transition{
     text-align:center;
     display:block;
@@ -119,7 +141,7 @@ div{
   
   
   .containers{
-    background: #F2F2F2;
+    //background: #F2F2F2;
     //border: 1px solid black;
     margin-top: 22em;
   }
@@ -137,13 +159,13 @@ div{
     background-color:white;
     width: 100%;
     //margin-left: -3%;
-    box-shadow: 7px -7px 4px #E4E4E4;
+    box-shadow: 7px 6px 4px rgba(0, 0, 0, 0.33);
   }
 
   #right-panel{
     background-color:white;
     width:100%;
-    box-shadow: -7px -7px 4px #E4E4E4;
+    box-shadow: -7px 6px 4px rgba(0, 0, 0, 0.33)
     //width: 34em;
     //margin-left: .9em;
   }
@@ -194,6 +216,8 @@ div{
     text-align: right;
   }
 
+  
+
   .arrows_about{
     display:block;
    // border: 1px solid black;
@@ -238,5 +262,22 @@ div{
 #gallery li{float: left; margin: 0 20px 15px 0;}
 #gallery li a img{border: 4px solid #40331b; height: 175px; width: 160px;}
 
+/* Joraaver & Suchaaver Pages */
 
+#header_pic{
+ height:2px;
+ background: $light-blue;
+}
+
+#major_info{
+  padding-left:1em;  
+
+  #details {
+    font-size: 140%;
+  }
   
+}
+
+
+
+

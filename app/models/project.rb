@@ -10,7 +10,7 @@ class Project < ActiveRecord::Base
   end
 
   def self.all_suchaaver(page)
-    paginate  :per_page => 2, :page => page,
+    paginate  :per_page => 3, :page => page,
               :conditions => {joraaver: false},
               :order => 'id DESC'
   end

@@ -5,10 +5,29 @@ class MusingsController < ApplicationController
   # GET /musings
   # GET /musings.json
   def index
+
     if joraaver? 
       @musings = Musing.all_joraaver(params[:page])
+      
     else 
       @musings = Musing.all_suchaaver(params[:page])
+    end
+  end
+  def feed_j
+    if joraaver?
+      @musings = Musing.all_joraaver(params[:page])
+      respond_to do |format|
+        format.rss { render :layout => false }
+      end
+    end
+  end
+
+  def feed_s
+    if not joraaver?
+      @musings = Musing.all_suchaaver(params[:page])
+      respond_to do |format|
+        format.rss { render :layout => false }
+      end
     end
   end
 

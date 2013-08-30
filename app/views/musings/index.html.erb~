@@ -1,6 +1,7 @@
+<%= provide(:title,"Musings") %>
 <% if joraaver? %>
-  <% render 'j_musings' %>
+  <%= render 'j_musings' %>
 <% else %>
-  <% render 's_musings' %>
+  <%= render 's_musings' %>
 <% end %>
 

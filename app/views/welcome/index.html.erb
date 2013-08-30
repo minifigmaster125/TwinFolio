@@ -34,7 +34,7 @@
         <div class="extra_info words">
           this?
         </div>
-        <%= link_to '', about_path,class: "transition" %>
+        <%= link_to '', '#', :id => "scroller" %>
       </div>
     </div>
     <div class="large-5 columns">
@@ -53,3 +53,54 @@
     </div>
   </div>
 </div>
+<div id="about_home">
+  <div class="row">
+    <div class = "small-2 columns">
+      <%= link_to (image_tag "Arrow-Up.png"), root_path, class: "arrows_about_up" %>
+      <div id  = "up_info" class = "words">
+        Up
+      </div>
+    </div>
+    <div class = "small-4 columns">
+      <div id = "top_words", class = "words">
+        This is us.
+      </div>
+    </div>
+    <div class = "small-4 columns">
+      <%= image_tag "placeholder.gif", class: "test_top_words"%>
+    </div>
+    <div class = "small-2 columns">
+    </div>
+  </div>
+  <div class="row">
+    <div class = "small-3 small-offset-2 columns">
+      <%= image_tag "placeholder.gif", class: "test"%>
+    </div>
+    <div class = "small-5 columns">
+      <div id = "middle_words", class = "words">
+        We are here to share with you our ideas, projects, ramblings, philosophies, works and creative pursuits. 
+      </div>
+    </div>
+    <div class = "small-1 columns">
+    </div>
+  </div>
+  <div class="row about_bot_row">
+    <div class = "small-2 columns">
+      <%= link_to (image_tag "Arrow-Left.png"),joraaver_path, id:"left_arrow",class: "arrows_about"%>
+    </div>
+    <div class = "small-3 columns">
+      <div id="bottom_left_words", class="words">
+        Over here, you can follow Joraaver in his various interests, from robotics and the Arduino, to juggling and fitness.
+      </div>
+    </div>
+    <div class = "small-3 small-offset-2 columns">
+      <div id="bottom_right_words", class="words">
+        This way, you can see Suchaaver's illustrations, concept art, graphic design, and thoughts on various topics.
+      </div>
+    </div>
+    <div class = "small-2 columns">
+      <%= link_to (image_tag "Arrow-Right.png"),suchaaver_path, id: "right_arrow", class: "arrows_about"%>
+    </div>
+  </div>
+</div>
+

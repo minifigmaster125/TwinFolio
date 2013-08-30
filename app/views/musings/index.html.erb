@@ -1,4 +1,5 @@
 <%= provide(:title,"Musings") %>
+<%= link_to "RSS Feed", musings_url(:rss) %>
 <% if joraaver? %>
   <%= render 'j_musings' %>
 <% else %>

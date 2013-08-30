@@ -45,5 +45,14 @@ $.fn.leavePage = ->
 $(".transition").leavePage()
 $(".arrows_about_up").leavePage()
 
+$("#about_home").height (index, height) ->
+    window.innerHeight - $(this).offset().top 
+
+$("#scroller").click ->
+    event.preventDefault()
+    $("#about_home").css
+        display: "block"
+    $('html, body').animate
+        scrollTop: $("#about_home").offset().top
 
 
