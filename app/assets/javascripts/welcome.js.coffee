@@ -55,4 +55,9 @@ $("#scroller").click ->
     $('html, body').animate
         scrollTop: $("#about_home").offset().top
 
+$("#arrows_about_up").click ->
+    event.preventDefault()
+    $('html, body').animate
+        scrollTop: 0
+
 

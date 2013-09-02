@@ -9,7 +9,7 @@ $light-blue: #0AB3C9;
 #about_home{
     display: none;
     padding-top: 30px;
-    background-color: #0AB3C9;
+    background-image:url('Title-page-bg-2_02.png')
   }
 
 #encase{
@@ -128,15 +128,26 @@ div{
 
 
   .words{
-    color: #A9CCE5;
+    color: #117292;
   }
-
+  
+  .names{
+    color: #43c2ec;
+    text-align: center;
+    font-size: 2em;
+    display: block;
+    margin-top: 30%;
+  }
   // Title Page tags
 
-
+  #Title{
+    height: inherit;
+    margin: 0 auto;
+    display: block;
+  }
   #top-grey{
     width:100%;
-    height: 8em;
+    height: 11em;
   }
   
   
@@ -204,16 +215,21 @@ div{
 
   #bottom_left_words{
     font-family: FaktSlabConPro-Blond;
-    font-size: 2em;
+    font-size: 3.5em;
     //margin: 1em .5em;
-    text-align: left;
+    text-align: center;
   }
                                                         
   #bottom_right_words{
     font-family: FaktSlabConPro-Blond;
-    font-size: 2em;
+    font-size: 3.5em;
     //margin: 1em .5em;
-    text-align: right;
+    text-align: center;
+  }
+
+  #list_words{
+    font-size: 1.5em;
+    text-align: left;
   }
 
   
@@ -225,7 +241,7 @@ div{
    //margin-bottom: 7em;
   }
   
-  .arrows_about_up{
+  #arrows_about_up{
     display:block;
     text-align:center;
     margin-top: 2em;
@@ -235,6 +251,7 @@ div{
     font-family: FaktSlabConPro-Blond;
     font-size: 2em;
     text-align: center;
+    margin-top: 1em;
   }
   .about_bot_row{
     margin-top:2em;
