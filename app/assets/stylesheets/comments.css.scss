@@ -5,31 +5,76 @@
 
 $comment_blue: #D2E2EF;
 $orange: #FFA501;
+$posted_blue: #23A3C4; 
+$font_style: FaktSlabConPro-Blond; 
 
 #comment{
   width: 30%;
 }
 
+
 .comment_info {
 
-  #name{
-  }
-
   li{
+    font-family:$font_style;
     display:inline;
   }
+  #name{
+    font-weight: bold;
+    font-size: 140%;
+    padding-right: 5%;
+  }
+  #posted{
+    font-size: 120%;
+    color: $posted_blue;
+  }
+}
+
+.comment_reply{
+
+  li{
+    list-style-type: none;
+  }
+
+  .reply{
+    padding: 2px;
+    text-align:right;
+    color:$posted_blue;
+
+    &:hover{
+      color:$orange;
+      cursor: pointer;
+    }
+  }
+  .reply_form{
+    display: none;
+  }
+
 }
 
 #body{
+  
+  background: red;
+  position: relative;
+  -moz-border-radius: 10px; 
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 10px;
   background-color: $comment_blue;
+  border: 3px solid white;
+
+  &:hover{
+    border: 3px solid $orange;
+  }
+
+  
 }
 
 #display_comment_form{
- //width: 100%;
- margin-top: 15px;
- height: 2em;
- border-radius: 8px;
- background-color: #FBB026;
+   margin-top: 15px;
+   height: 2em;
+   border-radius: 8px;
+   background-color: #FBB026;
    background-image: -webkit-linear-gradient(top, #FBB026 86%, #F78108 86%); 
    background-image:    -moz-linear-gradient(top, #FBB026 86%, #F78108 86%); 
    background-image:     -ms-linear-gradient(top, #FBB026 86%, #F78108 86%);

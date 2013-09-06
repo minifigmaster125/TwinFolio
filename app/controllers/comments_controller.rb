@@ -60,6 +60,7 @@ class CommentsController < ApplicationController
   # DELETE /comments/1
   # DELETE /comments/1.json
   def destroy
+    @comment.comments.destroy_all
     @comment.destroy
     respond_to do |format|
       format.html { redirect_to comments_url }
@@ -75,6 +76,6 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:name, :email, :comment, :musing_id)
+      params.require(:comment).permit(:name, :email, :comment, :musing_id, :comment_id)
     end
 end
